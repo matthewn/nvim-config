@@ -26,11 +26,8 @@ bootstrap_paq {
   'LunarVim/bigfile.nvim', -- handle large files more gracefully
   'LunarVim/lunar.nvim', -- colorscheme
   'MagicDuck/grug-far.nvim', -- project-wide find and replace at :GrugFar
-  'MunifTanjim/nui.nvim', -- req'd by navbuddy
-  'SmiteshP/nvim-navic', -- req'd by navbuddy
   'echasnovski/mini.nvim', -- multi-tool: files, statusline & more
   'j-hui/fidget.nvim', -- toast-like lsp messages & notifications
-  'hasansujon786/nvim-navbuddy',
   'lukas-reineke/indent-blankline.nvim', -- replaces vim-indent-guides
   'neovim/nvim-lspconfig', -- handle LSP configuration
   'numtostr/BufOnly.nvim', -- close all buffers but current

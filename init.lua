@@ -20,7 +20,7 @@ require('bigfile').setup()
 require('fidget').setup()
 require('neogotham').setup()
 require('night-owl').setup({ italics = false })
-require('nvim-navbuddy').setup({ opts = { lsp = { auto_attach = true } } })
+-- require('nvim-navbuddy').setup({ opts = { lsp = { auto_attach = true } } })
 require('time-machine').setup({})
 
 if vim.fn.has('vim_starting') == 1 then
