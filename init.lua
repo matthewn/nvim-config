@@ -8,6 +8,8 @@ require('legacy')
 
 require('lspconfig').pylsp.setup{}
 require('lsp.pylsp')
+require('lsp.lua-ls')
+vim.lsp.enable('lua-ls')
 
 require('paq-init')
 require('plugins.mini')
