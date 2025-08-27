@@ -6,10 +6,10 @@ require('mappings')
 require('neovide')
 require('legacy')
 
-require('lspconfig').pylsp.setup{}
 require('lsp.pylsp')
 require('lsp.lua-ls')
 vim.lsp.enable('lua-ls')
+vim.lsp.enable('pylsp')
 
 require('paq-init')
 require('plugins.mini')

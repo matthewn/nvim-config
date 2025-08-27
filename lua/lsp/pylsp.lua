@@ -1,11 +1,4 @@
-local lspconfig = require('lspconfig')
-
-lspconfig.pylsp.setup({
-  cmd = { 'pylsp' },
-  filetypes = { 'python' },
-  root_dir = lspconfig.util.root_pattern(
-    'pyproject.toml', 'setup.py', 'setup.cfg', 'requirements.txt', 'Pipfile', '.git'
-  ),
+vim.lsp.config('pylsp', {
   settings = {
     pylsp = {
       configurationSources = { 'flake8' }, -- use ~/.config/flake8
@@ -21,5 +14,4 @@ lspconfig.pylsp.setup({
       },
     },
   },
-  capabilities = capabilities,
 })
