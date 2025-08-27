@@ -27,7 +27,6 @@ bootstrap_paq {
   'LunarVim/lunar.nvim', -- colorscheme
   'MagicDuck/grug-far.nvim', -- project-wide find and replace at :GrugFar
   'MunifTanjim/nui.nvim', -- req'd by navbuddy
-  'SmiteshP/nvim-navbuddy', -- pop-up  browser
   'SmiteshP/nvim-navic', -- req'd by navbuddy
   'echasnovski/mini.nvim', -- multi-tool: files, statusline & more
   'j-hui/fidget.nvim', -- toast-like lsp messages & notifications
@@ -77,7 +76,6 @@ bootstrap_paq {
 
   -- vimscript plugins, have config in legacy.lua
   'Valloric/MatchTagAlways',
-  'airblade/vim-gitgutter',
   'airblade/vim-rooter',
   'andymass/vim-matchup',
   'junegunn/vim-easy-align',

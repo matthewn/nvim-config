@@ -28,9 +28,6 @@ vim.g.vdebug_keymap = {
   eval_visual    = '<leader>E',
 }
 
--- vim-gitgutter - git info expressed as vim signs
-vim.g.gitgutter_enabled = 0
-
 -- vim-gutentags - essential automated ctags mgr (replaces vim-easytags)
 vim.g.gutentags_cache_dir = vim.fn.stdpath('data') .. '/tags'
 
