@@ -8,10 +8,6 @@ local function my_highlights()
   -- set color for colorcolumn
   hl(0, 'ColorColumn', { ctermbg = 'red', bg = 'darkred' })
 
-  -- highlight trailing whitespace
-  hl(0, 'ExtraWhitespace', { ctermbg = 'red', bg = 'darkred' })
-  vim.fn.matchadd('ExtraWhitespace', [[\s\+$]])
-
   local colorscheme = vim.g.colors_name
 
   -- tweaks for neogotham
@@ -63,36 +59,6 @@ end
 local my_colors_group = vim.api.nvim_create_augroup('MyColors', { clear = true })
 
 -- set up autocommands
-autocmd('BufWinEnter', {
-  group = my_colors_group,
-  callback = function()
-    vim.fn.matchadd('ExtraWhitespace', [[\s\+$]])
-  end,
-})
-
-autocmd('InsertEnter', {
-  group = my_colors_group,
-  callback = function()
-    vim.fn.clearmatches()
-    vim.fn.matchadd('ExtraWhitespace', [[\s\+\%#\@<!$]])
-  end,
-})
-
-autocmd('InsertLeave', {
-  group = my_colors_group,
-  callback = function()
-    vim.fn.clearmatches()
-    vim.fn.matchadd('ExtraWhitespace', [[\s\+$]])
-  end,
-})
-
-autocmd('BufWinLeave', {
-  group = my_colors_group,
-  callback = function()
-    vim.fn.clearmatches()
-  end,
-})
-
 autocmd('ColorScheme', {
   group = my_colors_group,
   callback = my_highlights,

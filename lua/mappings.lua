@@ -57,9 +57,6 @@ keymap('n', '<leader>W', ':silent set wrap!<cr>:set wrap?<cr>', { silent = true 
 -- toggle line numbering
 keymap('n', '<leader>#', ':silent set number!<cr>:set number?<cr>', { silent = true })
 
--- remove trailing spaces on entire buffer without altering the cursor position
-keymap('n', '<leader>SS', ':silent %s/\\s\\+$<cr>:normal ``<cr>', { silent = true })
-
 -- fold tag
 keymap('n', '<leader>zT', 'Vatzf')
 
