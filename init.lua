@@ -1,16 +1,18 @@
+-- settings
 require('options')
 require('colors')
 require('autocmds')
 require('commands')
 require('mappings')
 require('neovide')
-require('legacy')
 
+-- LSP
 require('lsp.pylsp')
-require('lsp.lua-ls')
-vim.lsp.enable('lua-ls')
+require('lsp.lua_ls')
+vim.lsp.enable('lua_ls')
 vim.lsp.enable('pylsp')
 
+-- plugins
 require('paq-init')
 require('plugins.mini')
 require('plugins.barbar')
@@ -20,8 +22,12 @@ require('bigfile').setup()
 require('fidget').setup()
 require('neogotham').setup()
 require('night-owl').setup({ italics = false })
--- require('nvim-navbuddy').setup({ opts = { lsp = { auto_attach = true } } })
+require('nvim-navbuddy').setup({ lsp = { auto_attach = true } })
+require('rooter').setup({})
 require('time-machine').setup({})
+require('legacy')
+
+require('plugins.ibl-init')
 
 if vim.fn.has('vim_starting') == 1 then
   local ok = pcall(vim.cmd.colorscheme, 'night-owl')
@@ -37,4 +43,3 @@ if vim.fn.has('vim_starting') == 1 then
   end
 end
 
-require('plugins.ibl-init')

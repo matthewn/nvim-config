@@ -31,7 +31,6 @@ local function my_highlights()
   if colorscheme == 'iceberg' then
     if vim.o.background == 'light' then
       hl(0, 'TabLineSel', {
-        cterm = { bold = false },
         ctermbg = 234,
         ctermfg = 252,
         gui = { bold = false },
@@ -40,7 +39,6 @@ local function my_highlights()
       })
     else
       hl(0, 'TabLineSel', {
-        cterm = { bold = false },
         ctermbg = 234,
         ctermfg = 252,
         gui = { bold = false },

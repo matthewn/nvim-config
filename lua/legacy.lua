@@ -34,9 +34,6 @@ vim.g.gutentags_cache_dir = vim.fn.stdpath('data') .. '/tags'
 -- vim-matchup - replaces vim's matchit plugin
 vim.g.matchup_transmute_enabled = 1 -- enable paired tag renaming (replaces tagalong)
 
--- vim-rooter - auto cwd to project root
-vim.g.rooter_silent_chdir = 1
-
 -- vim-startify - start screen + sane sessions (replaces vim-sessionist)
 vim.g.startify_bookmarks = {
   { b = '~/.bashrc' },

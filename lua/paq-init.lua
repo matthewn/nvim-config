@@ -26,7 +26,11 @@ bootstrap_paq {
   'LunarVim/bigfile.nvim', -- handle large files more gracefully
   'LunarVim/lunar.nvim', -- colorscheme
   'MagicDuck/grug-far.nvim', -- project-wide find and replace at :GrugFar
+  'MunifTanjim/nui.nvim', -- req'd by navbuddy
+  'SmiteshP/nvim-navic', -- req'd by navbuddy
   'echasnovski/mini.nvim', -- multi-tool: files, statusline & more
+  'hasansujon786/nvim-navbuddy', -- lsp-powered popup code tree browser
+  'https://gitlab.com/shmerl/neogotham.git', -- colorscheme
   'j-hui/fidget.nvim', -- toast-like lsp messages & notifications
   'lukas-reineke/indent-blankline.nvim', -- replaces vim-indent-guides
   'neovim/nvim-lspconfig', -- handle LSP configuration
@@ -36,8 +40,8 @@ bootstrap_paq {
   'nvim-tree/nvim-web-devicons', -- used by barbar, mini.icons, etc.
   'oxfist/night-owl.nvim', -- colorscheme
   'romgrk/barbar.nvim', -- bufferline replacement
+  'wsdjeg/rooter.nvim', -- auto-cd to project root
   'y3owk1n/time-machine.nvim', -- undotree replacement
-  'https://gitlab.com/shmerl/neogotham.git', -- colorscheme
   { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
 
   -- vimscript plugins, no config
@@ -73,7 +77,6 @@ bootstrap_paq {
 
   -- vimscript plugins, have config in legacy.lua
   'Valloric/MatchTagAlways',
-  'airblade/vim-rooter',
   'andymass/vim-matchup',
   'junegunn/vim-easy-align',
   'kovisoft/slimv',
