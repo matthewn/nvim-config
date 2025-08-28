@@ -12,6 +12,7 @@ keymap('v', '<C-x>', '"+d', { desc = 'Cut to clipboard' })
 keymap('n', '<C-x>', '"+d$', { desc = 'Cut line to clipboard' })
 keymap({'n', 'v'}, '<C-v>', '"+p', { desc = 'Paste from clipboard' })
 keymap('i', '<C-v>', '<Esc>"+pa', { desc = 'Paste from clipboard (insert mode)' })
+keymap('c', '<C-v>', '<C-r>+', { desc = 'Paste from clipboard (command-line mode)'})
 
 -- <c-Q> for what <c-V> used to do (blockwise visual mode)
 keymap('', '<C-q>', '<C-v>')
