@@ -7,10 +7,9 @@ require('mappings')
 require('neovide')
 
 -- LSP
-require('lsp.pylsp')
 require('lsp.lua_ls')
-vim.lsp.enable('lua_ls')
-vim.lsp.enable('pylsp')
+require('lsp.pylsp')
+require('lsp.stylelint_lsp')
 
 -- plugins
 require('paq-init')
