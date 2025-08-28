@@ -26,15 +26,12 @@ keymap('v', '>', '>gv')
 -- do not move cursor after yanking in visual mode
 keymap('v', 'y', 'ygv<Esc>')
 
--- switch to last active buffer
+-- switch to last active buffer with <leader>,
 keymap('', '<leader>,', ':buffer #<cr>')
 
--- <space> and - for pagedown/up
+-- <space> and - for additional pagedown/up
 keymap('', '<Space>', '<PageDown>')
 keymap('', '-', '<PageUp>')
-
--- back to Startify
-keymap('n', '<leader><esc>', ':Startify<cr>')
 
 -- easy escape
 keymap('i', 'jj', '<esc>')
@@ -69,7 +66,7 @@ keymap('n', '<C-j>', '<C-w>j')
 keymap('n', '<C-k>', '<C-w>k')
 keymap('n', '<C-l>', '<C-w>l')
 
--- edit file, starting in same directory as current file [brilliant!]
+-- edit new file, starting in same directory as current file [brilliant!]
 keymap('', '<leader>e', ':e <C-R>=expand("%:p:h") . "/" <cr>')
 
 -- tab stop changes
@@ -94,7 +91,7 @@ end, { silent = true })
 -- toggle cursorcolumn
 keymap('n', '<leader>L', ':execute "setlocal colorcolumn=" . (&colorcolumn == "" ? "80" : "")<cr>', { silent = true })
 
--- search for the current visual selection
+-- search for the current visual selection with // (!!!)
 keymap('v', '//', [[y/\V<C-R>=escape(@",'/\')<cr><cr>]])
 
 -- html input mappings
@@ -103,9 +100,6 @@ keymap('v', '<leader>a', 'di<a href=""<esc>mza><esc>pa</a><esc>`zi')
 
 -- write with sudo, dammit
 vim.cmd([[cmap w!! w !sudo tee % >/dev/null]])
-
--- write and refresh in browser
-vim.cmd([[cmap ww<cr> w<cr> :silent! !~/bin/refresh<cr>]])
 
 
 -- mappings for plugins
@@ -127,6 +121,7 @@ keymap('n', '<C-S-h>', ':SidewaysLeft<cr>', { silent = true })
 keymap('n', '<C-S-l>', ':SidewaysRight<cr>', { silent = true })
 
 -- startify
+keymap('n', '<leader><esc>', ':Startify<cr>')
 keymap('n', '<leader>sc', ':SClose<cr>', { silent = true })
 keymap('n', '<leader>sd', ':SDelete ')
 keymap('n', '<leader>so', ':SLoad ')
