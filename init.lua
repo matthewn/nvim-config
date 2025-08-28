@@ -3,7 +3,7 @@ require('options')
 require('colors')
 require('autocmds')
 require('commands')
-require('mappings')
+require('keymaps')
 require('neovide')
 
 -- LSP
