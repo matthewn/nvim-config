@@ -3,31 +3,36 @@ require('mini.git').setup()
 require('mini.icons').setup()
 require('mini.statusline').setup({ use_icons = vim.g.neovide and true or false })
 
+
+-- show / remove trailing whitespace
 require('mini.trailspace').setup()
 local augroup = vim.api.nvim_create_augroup('mini.trailspace', { clear = true })
 vim.api.nvim_create_autocmd('ColorScheme', {
   group = augroup,
   callback = function()
-    vim.api.nvim_set_hl(0, 'MiniTrailspace', { bg = '#660000', fg = 'NONE' })
+    vim.api.nvim_set_hl(0, 'MiniTrailspace', { bg = '#660000', fg = 'NONE' }) -- dark red
   end,
 })
 vim.keymap.set('n', '<leader>SS', function()
-  MiniTrailspace.trim()
-end, { silent = true, desc = "Trim trailing whitespace" })
+  require('mini.trailspace').trim()
+end, { silent = true, desc = 'Trim trailing whitespace' })
 
 
+-- the incredible miller column filer!
 require('mini.files').setup({
-  mappings = { go_in_plus  = '<Enter>' },
+  mappings = {
+    go_in_plus  = '<enter>',
+    synchronize = '<tab>',
+  },
   content = { prefix = function() end }, -- disable icons
 })
 
 -- helper to find project root
 local function get_project_root()
   local cwd = vim.fn.getcwd()
-  local file = vim.api.nvim_buf_get_name(0)
 
   -- use LSP root if available
-  local clients = vim.lsp.get_active_clients({ bufnr = 0 })
+  local clients = vim.lsp.get_clients({ bufnr = 0 })
   if next(clients) ~= nil then
     local lsp_root = clients[1].config.root_dir
     if lsp_root ~= nil then
