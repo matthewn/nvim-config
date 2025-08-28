@@ -29,6 +29,7 @@ bootstrap_paq {
   'MunifTanjim/nui.nvim', -- req'd by navbuddy
   'SmiteshP/nvim-navic', -- req'd by navbuddy
   'echasnovski/mini.nvim', -- multi-tool: files, statusline & more
+  'gorbit99/codewindow.nvim', -- minimap at <leader>mm
   'hasansujon786/nvim-navbuddy', -- lsp-powered popup code tree browser
   'https://gitlab.com/shmerl/neogotham.git', -- colorscheme
   'j-hui/fidget.nvim', -- toast-like lsp messages & notifications
