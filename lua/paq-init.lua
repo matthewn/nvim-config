@@ -34,6 +34,7 @@ bootstrap_paq {
   'https://gitlab.com/shmerl/neogotham.git', -- colorscheme
   'j-hui/fidget.nvim', -- toast-like lsp messages & notifications
   'lukas-reineke/indent-blankline.nvim', -- replaces vim-indent-guides
+  'mfussenegger/nvim-lint', -- integrates non-LSP linters
   'neovim/nvim-lspconfig', -- LSP utilities & example configurations
   'numtostr/BufOnly.nvim', -- close all buffers but current
   'nvim-lua/plenary.nvim', -- used by telescope
