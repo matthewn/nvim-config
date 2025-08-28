@@ -33,13 +33,13 @@ bootstrap_paq {
   'https://gitlab.com/shmerl/neogotham.git', -- colorscheme
   'j-hui/fidget.nvim', -- toast-like lsp messages & notifications
   'lukas-reineke/indent-blankline.nvim', -- replaces vim-indent-guides
-  'neovim/nvim-lspconfig', -- handle LSP configuration
+  'neovim/nvim-lspconfig', -- LSP utilities & example configurations
   'numtostr/BufOnly.nvim', -- close all buffers but current
   'nvim-lua/plenary.nvim', -- used by telescope
   'nvim-telescope/telescope.nvim', -- fuzzy finder
   'nvim-tree/nvim-web-devicons', -- used by barbar, mini.icons, etc.
   'oxfist/night-owl.nvim', -- colorscheme
-  'romgrk/barbar.nvim', -- bufferline replacement
+  'romgrk/barbar.nvim', -- bufferline replacement w/ rearrangeable tabs
   'wsdjeg/rooter.nvim', -- auto-cd to project root
   'y3owk1n/time-machine.nvim', -- undotree replacement
   { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
@@ -47,14 +47,14 @@ bootstrap_paq {
   -- vimscript plugins, no config
   'AndrewRadev/sideways.vim', -- move arguments right/left
   'Vimjas/vim-python-pep8-indent', -- fix python indenting
-  'cakebaker/scss-syntax.vim', -- essential: syntax for scss
+  'cakebaker/scss-syntax.vim', -- essential: syntax for scss (non-ts)
   'chrisbra/Colorizer', -- show hex colors, etc. with :ColorToggle
   'cocopon/iceberg.vim', -- colorscheme
   'dhruvasagar/vim-open-url', -- gB to open url
   'fcpg/vim-orbital', -- colorscheme
   'gioele/vim-autoswap', -- essential: never ever bug me about swap files
   'gorkunov/smartpairs.vim', -- 'vv' for quick visual selection
-  'hail2u/vim-css3-syntax', -- essential: syntax for css3
+  'hail2u/vim-css3-syntax', -- essential: syntax for css3 (non-ts)
   'jlanzarotta/colorSchemeExplorer', -- does what it says on the tin
   'justinmk/vim-gtfo', -- got/T for a term; gof/F for a filemanager
   'junegunn/goyo.vim', -- replaces vimroom
@@ -72,7 +72,7 @@ bootstrap_paq {
   'tpope/vim-surround', -- essential
   'tpope/vim-unimpaired', -- handy mappings
   'tweekmonster/django-plus.vim', -- django niceties
-  'vim-python/python-syntax', -- improved python syntax highlighting
+  'vim-python/python-syntax', -- improved python syntax highlighting (non-ts)
   'xuhdev/vim-latex-live-preview', -- what it says on the tin
 
   -- vimscript plugins, have config in legacy.lua
