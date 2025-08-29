@@ -105,6 +105,14 @@ vim.cmd([[cmap w!! w !sudo tee % >/dev/null]])
 
 -- mappings for plugins
 
+-- barbar: buffer next/previous
+if vim.g.neovide then
+  keymap('n', '<C-Tab>', '<Cmd>BufferNext<CR>', { silent = true })
+  keymap('n', '<C-S-Tab>', '<Cmd>BufferPrevious<CR>', { silent = true })
+end
+keymap('n', 'gbn', '<Cmd>BufferNext<CR>', { silent = true })
+keymap('n', 'gbp', '<Cmd>BufferPrevious<CR>', { silent = true })
+
 -- bufonly
 keymap('n', '<leader>o', ':BufOnly<cr>', { silent = true })
 
@@ -130,3 +138,4 @@ keymap('n', '<leader>ss', ':SSave!<cr>', { silent = true })
 
 -- timemachine
 keymap('n', '<leader>u', '<cmd>TimeMachineToggle<cr>', { silent = true })
+
