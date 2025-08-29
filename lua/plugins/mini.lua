@@ -4,7 +4,33 @@ require('mini.icons').setup()
 require('mini.statusline').setup({ use_icons = vim.g.neovide and true or false })
 
 
--- show / remove trailing whitespace
+-- mini.completion: lightweight, nearly setup-free completion that *behaves*
+local completion = require('mini.completion')
+completion.setup({ delay = { completion = 200 } })
+
+-- smart tab functions (for keymaps below)
+local function smart_tab()
+  if vim.fn.pumvisible() == 1 then
+    return vim.api.nvim_replace_termcodes('<C-n>', true, true, true)
+  end
+  if require('mini.completion').complete() then
+    return '' -- completion opened
+  end
+  return vim.api.nvim_replace_termcodes('<tab>', true, true, true)
+end
+local function smart_s_tab()
+  if vim.fn.pumvisible() == 1 then
+    return vim.api.nvim_replace_termcodes('<c-p>', true, true, true)
+  end
+  return vim.api.nvim_replace_termcodes('<s-tab>', true, true, true)
+end
+
+vim.keymap.set('i', '<tab>', smart_tab, { expr = true })
+vim.keymap.set('i', '<s-tab>', smart_s_tab, { expr = true })
+vim.keymap.set('i', '<cr>', 'pumvisible() ? "\\<C-y>" : "\\<CR>"', { expr = true })
+
+
+-- mini.trailspace: show / remove trailing whitespace
 require('mini.trailspace').setup()
 local augroup = vim.api.nvim_create_augroup('mini.trailspace', { clear = true })
 vim.api.nvim_create_autocmd('ColorScheme', {
@@ -18,7 +44,7 @@ vim.keymap.set('n', '<leader>SS', function()
 end, { silent = true, desc = 'Trim trailing whitespace' })
 
 
--- the incredible miller column filer!
+-- mini.files: the incredible miller column filer!
 require('mini.files').setup({
   mappings = {
     go_in_plus  = '<enter>',
