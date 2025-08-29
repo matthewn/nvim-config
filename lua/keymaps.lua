@@ -75,8 +75,8 @@ keymap('n', '<leader>#2', ':set tabstop=2<cr><esc>:set softtabstop=2<cr><esc>:se
 keymap('n', '<leader>#4', ':set tabstop=4<cr><esc>:set softtabstop=4<cr><esc>:set shiftwidth=4<cr>')
 keymap('n', '<leader>#8', ':set tabstop=8<cr><esc>:set softtabstop=8<cr><esc>:set shiftwidth=4<cr>')
 
--- bug out with gx (this used to point at bufkill.vim's :BD)
-vim.keymap.set('n', 'gx', function()
+-- bug out with bd (this used to point at bufkill.vim's :BD)
+vim.keymap.set('n', 'bd', function()
   local buftype = vim.bo.buftype
   if vim.tbl_contains({'help', 'quickfix', 'loclist'}, buftype) then
     vim.cmd('quit')  -- close special window & remove its buffer
