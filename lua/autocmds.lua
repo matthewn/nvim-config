@@ -40,9 +40,9 @@ autocmd('BufReadPost', {
 autocmd('FileType', {
   group = augroup,
   pattern = 'qf',
-  desc = 'Close quickfix on <CR>',
+  desc = 'Close quickfix on <cr>',
   callback = function()
-    vim.keymap.set('n', '<CR>', '<CR>:cclose<CR>', { buffer = true, silent = true })
+    vim.keymap.set('n', '<cr>', '<cr>:cclose<cr>', { buffer = true, silent = true })
   end,
 })
 

@@ -24,7 +24,7 @@ require('fidget').setup()
 require('neogotham').setup()
 require('night-owl').setup({ italics = false })
 require('nvim-navbuddy').setup({ lsp = { auto_attach = true } })
-require('rooter').setup({})
+require('rooter').setup()
 require('time-machine').setup({})
 require('legacy')
 

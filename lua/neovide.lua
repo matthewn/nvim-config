@@ -13,7 +13,7 @@ if vim.g.neovide then
     vim.g.neovide_scale_factor = vim.g.neovide_scale_factor / 1.1
   end, {})
 
-  vim.keymap.set('n', 'g=', ':Bigger<CR>', { desc = 'Increase font size' })
-  vim.keymap.set('n', 'g-', ':Smaller<CR>', { desc = 'Decrease font size' })
+  vim.keymap.set('n', 'g=', ':Bigger<cr>', { desc = 'Increase font size' })
+  vim.keymap.set('n', 'g-', ':Smaller<cr>', { desc = 'Decrease font size' })
 
 end
