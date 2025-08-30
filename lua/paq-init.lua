@@ -53,6 +53,7 @@ bootstrap_paq {
   'chrisbra/Colorizer', -- show hex colors, etc. with :ColorToggle
   'cocopon/iceberg.vim', -- colorscheme
   'dhruvasagar/vim-open-url', -- gB to open url
+  'direnv/direnv.vim', -- direnv integration
   'fcpg/vim-orbital', -- colorscheme
   'gioele/vim-autoswap', -- essential: never ever bug me about swap files
   'gorkunov/smartpairs.vim', -- 'vv' for quick visual selection
