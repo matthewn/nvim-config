@@ -13,11 +13,15 @@ local function smart_tab()
   if vim.fn.pumvisible() == 1 then
     return vim.api.nvim_replace_termcodes('<C-n>', true, true, true)
   end
-  if require('mini.completion').complete() then
-    return '' -- completion opened
+  local ok, mini_completion = pcall(require, 'mini.completion')
+  if ok and mini_completion and mini_completion.complete then
+    if mini_completion.complete() then
+      return '' -- completion opened
+    end
   end
   return vim.api.nvim_replace_termcodes('<tab>', true, true, true)
 end
+
 local function smart_s_tab()
   if vim.fn.pumvisible() == 1 then
     return vim.api.nvim_replace_termcodes('<c-p>', true, true, true)
@@ -28,7 +32,6 @@ end
 vim.keymap.set('i', '<tab>', smart_tab, { expr = true })
 vim.keymap.set('i', '<s-tab>', smart_s_tab, { expr = true })
 vim.keymap.set('i', '<cr>', 'pumvisible() ? "\\<C-y>" : "\\<CR>"', { expr = true })
-
 
 -- mini.trailspace: show / remove trailing whitespace
 require('mini.trailspace').setup()
