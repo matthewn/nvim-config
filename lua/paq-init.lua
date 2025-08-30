@@ -34,6 +34,7 @@ bootstrap_paq {
   'https://gitlab.com/shmerl/neogotham.git', -- colorscheme
   'j-hui/fidget.nvim', -- toast-like lsp messages & notifications
   'lukas-reineke/indent-blankline.nvim', -- replaces vim-indent-guides
+  'kylechui/nvim-surround', -- vim-surround replacement
   'mfussenegger/nvim-lint', -- integrates non-LSP linters
   'neovim/nvim-lspconfig', -- LSP utilities & example configurations
   'numtostr/BufOnly.nvim', -- close all buffers but current
@@ -72,8 +73,6 @@ bootstrap_paq {
   'tpope/vim-characterize', -- power-up for 'ga'
   'tpope/vim-fugitive', -- essential: git gateway
   'tpope/vim-ragtag', -- useful html-related mappings
-  'tpope/vim-repeat', -- makes vim-surround better
-  'tpope/vim-surround', -- essential
   'tpope/vim-unimpaired', -- handy mappings
   'tweekmonster/django-plus.vim', -- django niceties
   'vim-python/python-syntax', -- improved python syntax highlighting (non-ts)
