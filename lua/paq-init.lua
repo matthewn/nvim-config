@@ -42,6 +42,7 @@ bootstrap_paq {
   'nvim-tree/nvim-web-devicons', -- used by barbar, mini.icons, etc.
   'oxfist/night-owl.nvim', -- colorscheme
   'romgrk/barbar.nvim', -- bufferline replacement w/ rearrangeable tabs
+  'stevearc/aerial.nvim', -- code outline window
   'wsdjeg/rooter.nvim', -- auto-cd to project root
   'y3owk1n/time-machine.nvim', -- undotree replacement
   { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },

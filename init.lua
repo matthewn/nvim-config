@@ -13,9 +13,10 @@ require('lsp.stylelint_lsp')
 
 -- plugins
 require('paq-init')
-require('plugins.mini')
+require('plugins.aerial')
 require('plugins.barbar')
 require('plugins.codewindow')
+require('plugins.mini')
 require('plugins.nvim-lint')
 require('plugins.nvim-treesitter')
 require('plugins.telescope')

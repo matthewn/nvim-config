@@ -4,13 +4,15 @@ require('aerial').setup({
     preview = true,
     -- Keymaps in the nav window
     keymaps = {
-      ['<cr>'] = "actions.jump",
-      ['<2-LeftMouse>'] = "actions.jump",
-      ['<C-v>'] = "actions.jump_vsplit",
-      ['<C-s>'] = "actions.jump_split",
-      ['h'] = "actions.left",
-      ['l'] = "actions.right",
-      ['q'] = "actions.close",
+      ['<cr>'] = 'actions.jump',
+      ['<2-LeftMouse>'] = 'actions.jump',
+      ['<c-v>'] = 'actions.jump_vsplit',
+      ['<c-s>'] = 'actions.jump_split',
+      ['h'] = 'actions.left',
+      ['l'] = 'actions.right',
+      ['<esc>'] = 'actions.close',
     },
   },
 })
+
+vim.keymap.set('n', '<leader>t', ':AerialNavToggle<cr>', { silent = true })
