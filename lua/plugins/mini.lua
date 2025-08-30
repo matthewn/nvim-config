@@ -7,7 +7,7 @@ require('mini.statusline').setup({ use_icons = vim.g.neovide and true or false }
 
 -- mini.completion: lightweight, nearly setup-free completion that *behaves*
 local completion = require('mini.completion')
-completion.setup({ delay = { completion = 200 } })
+completion.setup({ delay = { completion = 200, info = 400, signature = 1200 } })
 
 -- smart tab functions (for keymaps below)
 local function smart_tab()
