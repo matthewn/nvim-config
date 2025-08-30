@@ -52,10 +52,8 @@ bootstrap_paq {
   'Vimjas/vim-python-pep8-indent', -- fix python indenting
   'cakebaker/scss-syntax.vim', -- essential: syntax for scss (non-ts)
   'chrisbra/Colorizer', -- show hex colors, etc. with :ColorToggle
-  'cocopon/iceberg.vim', -- colorscheme
   'dhruvasagar/vim-open-url', -- gB to open url
   'direnv/direnv.vim', -- direnv integration
-  'fcpg/vim-orbital', -- colorscheme
   'gioele/vim-autoswap', -- essential: never ever bug me about swap files
   'gorkunov/smartpairs.vim', -- 'vv' for quick visual selection
   'hail2u/vim-css3-syntax', -- essential: syntax for css3 (non-ts)
