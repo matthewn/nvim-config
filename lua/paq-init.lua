@@ -36,6 +36,7 @@ bootstrap_paq {
   'nvim-lua/plenary.nvim', -- used by telescope
   'nvim-telescope/telescope.nvim', -- fuzzy finder
   'nvim-tree/nvim-web-devicons', -- used by barbar, mini.icons, etc.
+  'nvim-treesitter/nvim-treesitter-context', -- show top of long functions
   'romgrk/barbar.nvim', -- bufferline replacement w/ rearrangeable tabs
   'stevearc/aerial.nvim', -- code outline window
   'stevearc/conform.nvim', -- integration for black and such
