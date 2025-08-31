@@ -1,8 +1,8 @@
 local highlight
 if vim.tbl_contains({'night-owl', 'neogotham'}, vim.g.colors_name) then
   highlight = {
+    'CursorLineFold',
     'StatusLineNC',
-    'Visual',
   }
 else
   highlight = {

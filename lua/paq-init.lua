@@ -24,12 +24,9 @@ bootstrap_paq {
   -- nvim plugins
   'savq/paq-nvim',
   'LunarVim/bigfile.nvim', -- handle large files more gracefully
-  'LunarVim/lunar.nvim', -- colorscheme
   'MagicDuck/grug-far.nvim', -- project-wide find and replace at :GrugFar
-  'EdenEast/nightfox.nvim', -- colorschemes (includes carbonfox)
   'echasnovski/mini.nvim', -- multi-tool: files, statusline & more
   'gorbit99/codewindow.nvim', -- minimap at <leader>mm
-  'https://gitlab.com/shmerl/neogotham.git', -- colorscheme
   'j-hui/fidget.nvim', -- toast-like lsp messages & notifications
   'lukas-reineke/indent-blankline.nvim', -- replaces vim-indent-guides
   'kylechui/nvim-surround', -- vim-surround replacement
@@ -39,13 +36,17 @@ bootstrap_paq {
   'nvim-lua/plenary.nvim', -- used by telescope
   'nvim-telescope/telescope.nvim', -- fuzzy finder
   'nvim-tree/nvim-web-devicons', -- used by barbar, mini.icons, etc.
-  'oxfist/night-owl.nvim', -- colorscheme
   'romgrk/barbar.nvim', -- bufferline replacement w/ rearrangeable tabs
   'stevearc/aerial.nvim', -- code outline window
   'stevearc/conform.nvim', -- integration for black and such
   'wsdjeg/rooter.nvim', -- auto-cd to project root
   'y3owk1n/time-machine.nvim', -- undotree replacement
   { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
+
+  -- colorschemes
+  'oahlen/iceberg.nvim',
+  'oxfist/night-owl.nvim',
+  'https://gitlab.com/shmerl/neogotham.git',
 
   -- vimscript plugins, no config
   'AndrewRadev/sideways.vim', -- move arguments right/left
