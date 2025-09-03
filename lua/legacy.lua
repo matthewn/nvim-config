@@ -46,6 +46,6 @@ vim.g.startify_lists = {
   { type = 'commands',  header = { '   Commands' } },
 }
 vim.g.startify_session_persistence = 1
-vim.g.startify_files_number = 5
+vim.g.startify_files_number = 4
 vim.g.startify_fortune_use_unicode = 1
 vim.g.startify_session_dir = vim.fn.stdpath('data') .. '/sessions'
