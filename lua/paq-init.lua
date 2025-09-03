@@ -39,6 +39,7 @@ bootstrap_paq {
   'nvim-treesitter/nvim-treesitter-context', -- show top of long functions
   'romgrk/barbar.nvim', -- bufferline replacement w/ rearrangeable tabs
   'stevearc/aerial.nvim', -- code outline window
+  'zaldih/themery.nvim', -- colorscheme browser
   'stevearc/conform.nvim', -- integration for black and such
   'wsdjeg/rooter.nvim', -- auto-cd to project root
   'y3owk1n/time-machine.nvim', -- undotree replacement
@@ -59,7 +60,6 @@ bootstrap_paq {
   'gioele/vim-autoswap', -- essential: never ever bug me about swap files
   'gorkunov/smartpairs.vim', -- 'vv' for quick visual selection
   'hail2u/vim-css3-syntax', -- essential: syntax for css3 (non-ts)
-  'jlanzarotta/colorSchemeExplorer', -- does what it says on the tin
   'justinmk/vim-gtfo', -- got/T for a term; gof/F for a filemanager
   'junegunn/goyo.vim', -- replaces vimroom
   'junegunn/gv.vim', -- git browser at :GV :GV! :GV? (replaces cohama/agit.vim for now)
