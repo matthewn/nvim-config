@@ -8,6 +8,9 @@ local function my_highlights()
   -- set color for colorcolumn
   hl(0, 'ColorColumn', { ctermbg = 'red', bg = 'darkred' })
 
+  -- DO NOT grey out lines with F841 (unused var) warning from pylsp
+  hl(0, "DiagnosticUnnecessary", {})
+
   local colorscheme = vim.g.colors_name
 
   -- tweaks for neogotham
