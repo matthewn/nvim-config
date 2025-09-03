@@ -13,10 +13,12 @@ require('lsp.stylelint_lsp')
 
 -- plugins
 require('paq-init')
+require('legacy')
 require('plugins.aerial')
 require('plugins.barbar')
 require('plugins.codewindow')
 require('plugins.conform')
+require('plugins.ibl-init')
 require('plugins.mini')
 require('plugins.nvim-lint')
 require('plugins.nvim-treesitter')
@@ -28,12 +30,9 @@ require('night-owl').setup({ italics = false })
 require('nvim-surround').setup()
 require('rooter').setup()
 require('time-machine').setup({})
-require('legacy')
-
-require('plugins.ibl-init')
 
 if vim.fn.has('vim_starting') == 1 then
-  local ok = pcall(vim.cmd.colorscheme, 'night-owl')
+  local ok = pcall(vim.cmd.colorscheme, 'neogotham')
   if not ok then
     vim.cmd.colorscheme('darkblue')
   end
