@@ -7,13 +7,25 @@ require('mini.statusline').setup({ use_icons = vim.g.neovide and true or false }
 
 
 -- mini.completion: lightweight, nearly setup-free completion that *behaves*
-local completion = require('mini.completion')
-completion.setup({ delay = { completion = 200, info = 400, signature = 1200 } })
+-- local completion = require('mini.completion')
+-- completion.setup({
+--   delay = {completion = 200, info = 400, signature = 1200},
+--   lsp_completion = {
+--     enabled = function()
+--       local ft = vim.bo.filetype
+--       -- disable for html and htmldjango
+--       if ft == 'html' or ft == 'htmldjango' then
+--         return false
+--       end
+--       return true
+--     end,
+--   },
+-- })
 
 -- smart tab functions (for keymaps below)
 local function smart_tab()
   if vim.fn.pumvisible() == 1 then
-    return vim.api.nvim_replace_termcodes('<C-n>', true, true, true)
+    return vim.api.nvim_replace_termcodes('<c-n>', true, true, true)
   end
   local ok, mini_completion = pcall(require, 'mini.completion')
   if ok and mini_completion and mini_completion.complete then
@@ -34,6 +46,7 @@ end
 vim.keymap.set('i', '<tab>', smart_tab, { expr = true })
 vim.keymap.set('i', '<s-tab>', smart_s_tab, { expr = true })
 vim.keymap.set('i', '<cr>', 'pumvisible() ? "\\<C-y>" : "\\<CR>"', { expr = true })
+
 
 -- mini.trailspace: show / remove trailing whitespace
 require('mini.trailspace').setup()
