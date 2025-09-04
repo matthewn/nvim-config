@@ -25,6 +25,7 @@ bootstrap_paq {
   'savq/paq-nvim',
   'LunarVim/bigfile.nvim', -- handle large files more gracefully
   'MagicDuck/grug-far.nvim', -- project-wide find and replace at :GrugFar
+  'NeogitOrg/neogit', -- git git git
   'echasnovski/mini.nvim', -- multi-tool: files, statusline & more
   'gorbit99/codewindow.nvim', -- minimap at <leader>mm
   'j-hui/fidget.nvim', -- toast-like lsp messages & notifications
@@ -38,6 +39,7 @@ bootstrap_paq {
   'nvim-tree/nvim-web-devicons', -- used by barbar, mini.icons, etc.
   'nvim-treesitter/nvim-treesitter-context', -- show top of long functions
   'romgrk/barbar.nvim', -- bufferline replacement w/ rearrangeable tabs
+  'sindrets/diffview.nvim', -- used with neogit
   'stevearc/aerial.nvim', -- code outline window
   'zaldih/themery.nvim', -- colorscheme browser
   'stevearc/conform.nvim', -- integration for black and such
