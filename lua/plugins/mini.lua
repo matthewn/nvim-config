@@ -7,20 +7,20 @@ require('mini.statusline').setup({ use_icons = vim.g.neovide and true or false }
 
 
 -- mini.completion: lightweight, nearly setup-free completion that *behaves*
--- local completion = require('mini.completion')
--- completion.setup({
---   delay = {completion = 200, info = 400, signature = 1200},
---   lsp_completion = {
---     enabled = function()
---       local ft = vim.bo.filetype
---       -- disable for html and htmldjango
---       if ft == 'html' or ft == 'htmldjango' then
---         return false
---       end
---       return true
---     end,
---   },
--- })
+local completion = require('mini.completion')
+completion.setup({
+  delay = {completion = 200, info = 400, signature = 1200},
+  lsp_completion = {
+    enabled = function()
+      local ft = vim.bo.filetype
+      -- disable for html and htmldjango
+      if ft == 'html' or ft == 'htmldjango' then
+        return false
+      end
+      return true
+    end,
+  },
+})
 
 -- smart tab functions (for keymaps below)
 local function smart_tab()
