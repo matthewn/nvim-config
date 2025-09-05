@@ -29,6 +29,7 @@ bootstrap_paq {
   'echasnovski/mini.nvim', -- multi-tool: files, statusline & more
   'gorbit99/codewindow.nvim', -- minimap at <leader>mm
   'j-hui/fidget.nvim', -- toast-like lsp messages & notifications
+  'lewis6991/gitsigns.nvim', -- git in the gutter
   'lukas-reineke/indent-blankline.nvim', -- replaces vim-indent-guides
   'kylechui/nvim-surround', -- vim-surround replacement
   'mfussenegger/nvim-lint', -- integrates non-LSP linters

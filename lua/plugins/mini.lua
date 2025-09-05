@@ -1,5 +1,4 @@
 require('mini.completion').setup()
-require('mini.git').setup()
 require('mini.icons').setup()
 require('mini.splitjoin').setup()
 require('mini.statusline').setup({ use_icons = vim.g.neovide and true or false })
@@ -8,7 +7,7 @@ require('mini.statusline').setup({ use_icons = vim.g.neovide and true or false }
 -- mini.completion: lightweight, nearly setup-free completion that *behaves*
 local completion = require('mini.completion')
 completion.setup({
-  delay = {completion = 200, info = 400, signature = 1200},
+  delay = { completion = 200, info = 400, signature = 1200 },
   lsp_completion = {
     enabled = function()
       local ft = vim.bo.filetype
