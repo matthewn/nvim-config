@@ -120,10 +120,13 @@ keymap('n', 'gbp', '<cmd>BufferPrevious<cr>', { silent = true })
 keymap('n', '<leader>o', ':BufOnly<cr>', { silent = true })
 
 -- ctrlsf
-keymap('n', '<leader>F', ':CtrlSF<space>', { silent = false })
+keymap('n', '<leader>F', ':CtrlSF<space>')
 
 -- easyalign
-keymap('v', '<cr>', '<plug>(EasyAlign)', {})
+keymap('v', '<cr>', '<plug>(EasyAlign)')
+
+-- neogit
+keymap('n', '<leader>G', ':Neogit kind=floating<cr>', { silent = true })
 
 -- sideways.vim
 keymap('n', '<C-S-h>', ':SidewaysLeft<cr>', { silent = true })
