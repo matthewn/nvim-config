@@ -11,6 +11,18 @@ local function my_highlights()
   -- DO NOT grey out lines with F841 (unused var) warning from pylsp
   hl(0, "DiagnosticUnnecessary", {})
 
+  -- turn staged git hunk signs lime green
+  local lime = '#00FF00'
+  hl(0, 'GitSignsStagedAdd',    { fg = lime })
+  hl(0, 'GitSignsStagedChange', { fg = lime })
+  hl(0, 'GitSignsStagedDelete', { fg = lime })
+  hl(0, 'GitSignsStagedAddNr',     { fg = lime })
+  hl(0, 'GitSignsStagedAddLn',     { fg = lime })
+  hl(0, 'GitSignsStagedChangeNr',  { fg = lime })
+  hl(0, 'GitSignsStagedChangeLn',  { fg = lime })
+  hl(0, 'GitSignsStagedDeleteNr',  { fg = lime })
+  hl(0, 'GitSignsStagedDeleteLn',  { fg = lime })
+
   local colorscheme = vim.g.colors_name
 
   -- tweaks for neogotham

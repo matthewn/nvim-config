@@ -20,14 +20,3 @@ require('gitsigns').setup({
     end)
   end
 })
-
-local lime = '#00FF00'
-vim.api.nvim_set_hl(0, 'GitSignsStagedAdd',    { fg = lime })
-vim.api.nvim_set_hl(0, 'GitSignsStagedChange', { fg = lime })
-vim.api.nvim_set_hl(0, 'GitSignsStagedDelete', { fg = lime })
-vim.api.nvim_set_hl(0, 'GitSignsStagedAddNr',     { fg = lime })
-vim.api.nvim_set_hl(0, 'GitSignsStagedAddLn',     { fg = lime })
-vim.api.nvim_set_hl(0, 'GitSignsStagedChangeNr',  { fg = lime })
-vim.api.nvim_set_hl(0, 'GitSignsStagedChangeLn',  { fg = lime })
-vim.api.nvim_set_hl(0, 'GitSignsStagedDeleteNr',  { fg = lime })
-vim.api.nvim_set_hl(0, 'GitSignsStagedDeleteLn',  { fg = lime })
