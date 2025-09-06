@@ -9,9 +9,13 @@ local function my_highlights()
   hl(0, 'ColorColumn', { ctermbg = 'red', bg = 'darkred' })
 
   -- DO NOT grey out lines with F841 (unused var) warning from pylsp
-  hl(0, "DiagnosticUnnecessary", {})
+  hl(0, 'DiagnosticUnnecessary', {})
 
-  -- turn staged git hunk signs lime green
+  -- todo-comments highlighting overrides
+  hl(0, 'TodoBgFIX', { fg = '#eeeeee', bg = '#900d09' }) -- blackish/scarlet
+  hl(0, 'TodoBgTODO', { fg = '#111111', bg = '#f8e473' }) -- whiteish/'laguna' yellow
+
+  -- gitsigns: turn staged git hunk signs lime green
   local lime = '#00FF00'
   hl(0, 'GitSignsStagedAdd',    { fg = lime })
   hl(0, 'GitSignsStagedChange', { fg = lime })
@@ -23,6 +27,7 @@ local function my_highlights()
   hl(0, 'GitSignsStagedDeleteNr',  { fg = lime })
   hl(0, 'GitSignsStagedDeleteLn',  { fg = lime })
 
+  -- colorscheme-specific tweaks
   local colorscheme = vim.g.colors_name
 
   -- tweaks for neogotham
@@ -41,20 +46,17 @@ local function my_highlights()
   --   hl(0, 'Todo', { fg = '#ffffff', bg = 'red' })
   -- end
 
-  -- reinitialize the indent guides
+  -- reinitialize the indent guides after all other color changes
   package.loaded['plugins.ibl-init'] = nil
   require('plugins.ibl-init')
 end
 
--- create autocommand group
-local my_colors_group = vim.api.nvim_create_augroup('MyColors', { clear = true })
-
 -- set up autocommands
+local my_colors_group = vim.api.nvim_create_augroup('MyColors', { clear = true })
 autocmd('ColorScheme', {
   group = my_colors_group,
   callback = my_highlights,
 })
-
 autocmd('BufWinEnter', {
   group = my_colors_group,
   callback = my_highlights,

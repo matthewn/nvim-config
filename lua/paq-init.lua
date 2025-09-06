@@ -27,6 +27,7 @@ bootstrap_paq {
   'MagicDuck/grug-far.nvim', -- project-wide find and replace at :GrugFar
   'NeogitOrg/neogit', -- git git git
   'echasnovski/mini.nvim', -- multi-tool: files, statusline & more
+  'folke/todo-comments.nvim', -- highlight TODO and such
   'gorbit99/codewindow.nvim', -- minimap at <leader>mm
   'j-hui/fidget.nvim', -- toast-like lsp messages & notifications
   'lewis6991/gitsigns.nvim', -- git in the gutter
@@ -42,10 +43,10 @@ bootstrap_paq {
   'romgrk/barbar.nvim', -- bufferline replacement w/ rearrangeable tabs
   'sindrets/diffview.nvim', -- used with neogit
   'stevearc/aerial.nvim', -- code outline window
-  'zaldih/themery.nvim', -- colorscheme browser
-  'stevearc/conform.nvim', -- integration for black and such
+  'stevearc/conform.nvim', -- :Format (for black and such)
   'wsdjeg/rooter.nvim', -- auto-cd to project root
   'y3owk1n/time-machine.nvim', -- undotree replacement
+  'zaldih/themery.nvim', -- colorscheme browser
   { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
 
   -- colorschemes
