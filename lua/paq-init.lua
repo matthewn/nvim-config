@@ -74,7 +74,6 @@ bootstrap_paq {
   'thiderman/vim-reinhardt', -- for django-aware 'gf'
   'tmhedberg/SimpylFold', -- improved folding for python
   'tpope/vim-characterize', -- power-up for 'ga'
-  'tpope/vim-fugitive', -- essential: git gateway
   'tpope/vim-ragtag', -- useful html-related mappings
   'tpope/vim-unimpaired', -- handy mappings
   'tweekmonster/django-plus.vim', -- django niceties

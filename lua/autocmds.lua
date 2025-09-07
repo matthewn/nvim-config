@@ -55,13 +55,3 @@ autocmd('FileType', {
     vim.opt_local.iskeyword:append('-')
   end,
 })
-
--- auto-delete fugitive buffers
-autocmd('BufReadPost', {
-  group = augroup,
-  pattern = 'fugitive://*',
-  desc = 'Auto-delete fugitive buffers',
-  callback = function()
-    vim.bo.bufhidden = 'delete'
-  end,
-})
