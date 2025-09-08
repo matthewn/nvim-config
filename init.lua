@@ -33,6 +33,7 @@ require('neogotham').setup()
 require('night-owl').setup({ italics = false })
 require('nvim-surround').setup()
 require('rooter').setup()
+require('scrollview').setup()
 require('time-machine').setup({})
 
 if vim.fn.has('vim_starting') == 1 then
@@ -48,4 +49,3 @@ if vim.fn.has('vim_starting') == 1 then
     vim.opt.guifont = 'Ubuntu Mono:h16'
   end
 end
-

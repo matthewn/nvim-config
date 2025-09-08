@@ -26,6 +26,7 @@ bootstrap_paq {
   'LunarVim/bigfile.nvim', -- handle large files more gracefully
   'MagicDuck/grug-far.nvim', -- project-wide find and replace at :GrugFar
   'NeogitOrg/neogit', -- git git git
+  'dstein64/nvim-scrollview', -- scrollbars
   'echasnovski/mini.nvim', -- multi-tool: files, statusline & more
   'folke/todo-comments.nvim', -- highlight TODO and such
   'gorbit99/codewindow.nvim', -- minimap at <leader>mm
