@@ -1,4 +1,5 @@
 vim.g.mapleader = ','
+
 local keymap = vim.keymap.set
 
 -- make up and down arrows NOT linewise in insert mode
@@ -107,14 +108,6 @@ vim.cmd([[cmap w!! w !sudo tee % >/dev/null]])
 
 
 -- mappings for plugins
-
--- barbar: buffer next/previous
-if vim.g.neovide then
-  keymap('n', '<c-tab>', '<Cmd>BufferNext<cr>', { silent = true })
-  keymap('n', '<c-s-tab>', '<Cmd>BufferPrevious<cr>', { silent = true })
-end
-keymap('n', 'gbn', '<cmd>BufferNext<cr>', { silent = true })
-keymap('n', 'gbp', '<cmd>BufferPrevious<cr>', { silent = true })
 
 -- bufonly
 keymap('n', '<leader>o', ':BufOnly<cr>', { silent = true })
