@@ -27,10 +27,8 @@ bootstrap_paq {
   'MagicDuck/grug-far.nvim', -- project-wide find and replace at :GrugFar
   'NeogitOrg/neogit', -- git git git
   'chrishrb/gx.nvim', -- improved 'gx' command
-  'dstein64/nvim-scrollview', -- scrollbars
   'echasnovski/mini.nvim', -- multi-tool: files, statusline & more
   'folke/todo-comments.nvim', -- highlight TODO and such
-  'gorbit99/codewindow.nvim', -- minimap at <leader>mm
   'j-hui/fidget.nvim', -- toast-like lsp messages & notifications
   'lewis6991/gitsigns.nvim', -- git in the gutter
   'lukas-reineke/indent-blankline.nvim', -- replaces vim-indent-guides
