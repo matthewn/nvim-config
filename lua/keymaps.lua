@@ -126,7 +126,7 @@ keymap('n', '<leader>F', ':CtrlSF<space>')
 keymap('v', '<cr>', '<plug>(EasyAlign)')
 
 -- neogit
-keymap('n', '<leader>G', ':Neogit kind=floating<cr>', { silent = true })
+keymap('n', '<leader>G', ':Neogit<cr>', { silent = true })
 
 -- sideways.vim
 keymap('n', '<C-S-h>', ':SidewaysLeft<cr>', { silent = true })
