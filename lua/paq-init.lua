@@ -48,6 +48,7 @@ bootstrap_paq {
   'y3owk1n/time-machine.nvim', -- undotree replacement
   'zaldih/themery.nvim', -- colorscheme browser
   { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
+  { 'volvofixthis/e-kaput.nvim', branch = 'fixes' },
 
   -- colorschemes
   'oahlen/iceberg.nvim',

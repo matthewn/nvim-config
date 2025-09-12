@@ -1,24 +1,6 @@
 local autocmd = vim.api.nvim_create_autocmd
 local augroup = vim.api.nvim_create_augroup('init', { clear = true })
 
--- show diagnostics in floating window on cursor hold
-autocmd('CursorHold', {
-  group = augroup,
-  desc = 'Show diagnostics in floating window on cursor hold',
-  callback = function()
-    if #vim.diagnostic.get(0, { lnum = vim.fn.line('.') - 1 }) > 0 then
-      local opts = {
-        focusable = false,
-        close_events = { 'BufLeave', 'CursorMoved', 'InsertEnter', 'FocusLost' },
-        border = 'rounded',
-        source = 'always',
-        prefix = ' ',
-      }
-      vim.diagnostic.open_float(nil, opts)
-    end
-  end
-})
-
 -- jump to last cursor location unless editing a git commit
 autocmd('BufReadPost', {
   group = augroup,
