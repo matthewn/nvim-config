@@ -1,4 +1,9 @@
--- config for legacy vimscripts that use vim.g for such
+-- config for global vars
+-- (mostly for legacy vimscripts)
+
+-- set global python location to quiet errors relating to pynvim
+-- not being installed in every venv we have
+vim.g.python3_host_prog = '/usr/bin/python3'
 
 -- MatchTagAlways - html tag highlighting
 vim.g.mta_filetypes = {

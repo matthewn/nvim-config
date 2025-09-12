@@ -1,5 +1,6 @@
 -- settings
 require('options')
+require('globals')
 require('colors')
 require('autocmds')
 require('commands')
@@ -13,7 +14,6 @@ require('lsp.stylelint_lsp')
 
 -- plugins
 require('paq-init')
-require('legacy')
 require('plugins.aerial')
 require('plugins.barbar')
 require('plugins.conform')
