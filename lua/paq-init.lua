@@ -27,7 +27,6 @@ bootstrap_paq {
   'MagicDuck/grug-far.nvim', -- project-wide find and replace at :GrugFar
   'NeogitOrg/neogit', -- git git git
   'chrishrb/gx.nvim', -- improved 'gx' command
-  'echasnovski/mini.nvim', -- multi-tool: files, statusline & more
   'folke/todo-comments.nvim', -- highlight TODO and such
   'j-hui/fidget.nvim', -- toast-like lsp messages & notifications
   'lewis6991/gitsigns.nvim', -- git in the gutter
@@ -37,6 +36,7 @@ bootstrap_paq {
   'neovim/nvim-lspconfig', -- LSP utilities & example configurations
   'numtostr/BufOnly.nvim', -- close all buffers but current
   'nvim-lua/plenary.nvim', -- used by telescope
+  'nvim-mini/mini.nvim', -- multi-tool: files, statusline & more
   'nvim-telescope/telescope.nvim', -- fuzzy finder
   'nvim-tree/nvim-web-devicons', -- used by barbar, mini.icons, etc.
   'nvim-treesitter/nvim-treesitter-context', -- show top of long functions
