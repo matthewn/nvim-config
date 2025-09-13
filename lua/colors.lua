@@ -39,12 +39,11 @@ local function my_highlights()
   end
 
   -- tweaks for night-owl
-  -- if colorscheme == 'night-owl' then
-  --   hl(0, 'MatchParen', { fg = '#ffffff', bg = '#0a3749' })
-  --   hl(0, 'Search', { fg = '#ffffff', bg = 'blue' })
-  --   hl(0, 'IncSearch', { fg = '#ffffff', bg = 'blue' })
-  --   hl(0, 'Todo', { fg = '#ffffff', bg = 'red' })
-  -- end
+  if colorscheme == 'night-owl' then
+    hl(0, 'MatchParen', { fg = '#ffffff', bg = '#0a3749' })
+    hl(0, 'Search', { fg = '#ffffff', bg = 'blue' })
+    hl(0, 'IncSearch', { fg = '#ffffff', bg = 'blue' })
+  end
 
   -- reinitialize the indent guides after all other color changes
   package.loaded['plugins.ibl-init'] = nil
