@@ -1,6 +1,6 @@
 local lint = require('lint')
 
--- Extend the eslint linter to always add --foobar
+-- add custom --config location for eslint
 lint.linters.eslint.args = {
   '--config', vim.fn.expand('~/.config/eslint/eslint.config.js'),
   '--no-color', -- defaults from here to end of table

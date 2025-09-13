@@ -3,7 +3,7 @@ local opt = vim.opt
 opt.backspace = { 'indent', 'eol', 'start' } -- allow b/s over everything in insert mode
 opt.breakindent = true -- smart/indented line wrapping
 opt.confirm = true -- confirm dialog instead of fail
-opt.dict:append('~/.config/nvim/dictionaries/wordlist.dict')
+opt.dict:append(vim.fn.stdpath('config') .. '/wordlist.dict')
 opt.foldenable = false
 opt.foldmethod = 'indent'
 opt.formatoptions:append('j') -- make J command grok multiline code comments
