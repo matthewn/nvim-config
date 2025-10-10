@@ -60,10 +60,14 @@ vim.keymap.set('n', '<leader>SS', function()
 end, { silent = true, desc = 'Trim trailing whitespace' })
 
 
--- mini.files: the incredible miller column filer!
+-- mini.files: ** !! miller column filer !! **
 require('mini.files').setup({
   mappings = {
+    close       = 'q',
+    go_in       = 'L',
     go_in_plus  = '<enter>',
+    go_out      = 'H',
+    go_out_plus  = '',
     synchronize = '<tab>',
   },
   content = { prefix = function() end }, -- disable icons
