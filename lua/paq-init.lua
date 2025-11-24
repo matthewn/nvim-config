@@ -79,7 +79,6 @@ bootstrap_paq {
   'tpope/vim-unimpaired', -- handy mappings
   'tweekmonster/django-plus.vim', -- django niceties
   'vim-python/python-syntax', -- improved python syntax highlighting (non-ts)
-  'xuhdev/vim-latex-live-preview', -- what it says on the tin
 
   -- vimscript plugins, have config in legacy.lua
   'Valloric/MatchTagAlways',
