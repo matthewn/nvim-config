@@ -80,7 +80,7 @@ bootstrap_paq {
   'tweekmonster/django-plus.vim', -- django niceties
   'vim-python/python-syntax', -- improved python syntax highlighting (non-ts)
 
-  -- vimscript plugins, have config in legacy.lua
+  -- vimscript plugins, have config in globals.lua
   'Valloric/MatchTagAlways',
   'andymass/vim-matchup',
   'junegunn/vim-easy-align',
