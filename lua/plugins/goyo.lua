@@ -13,6 +13,7 @@ vim.api.nvim_create_autocmd('User', {
     M.prev_colorscheme = vim.g.colors_name
     vim.cmd('Bigger')
     vim.cmd('Bigger')
+    vim.opt.lbr = true
     -- vim.cmd("colorscheme darkblue")
   end,
 })
@@ -26,6 +27,7 @@ vim.api.nvim_create_autocmd('User', {
     M.active = false
     vim.cmd('Smaller')
     vim.cmd('Smaller')
+    vim.opt.lbr = false
     if M.prev_colorscheme then
       vim.cmd('colorscheme ' .. M.prev_colorscheme)
       M.prev_colorscheme = nil
