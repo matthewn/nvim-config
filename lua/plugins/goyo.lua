@@ -9,6 +9,7 @@ vim.api.nvim_create_autocmd('User', {
     M.active = true
 
     -- vim.cmd("colorscheme darkblue")
+    vim.g.neovide_fullscreen = true
     vim.cmd('Bigger')
     vim.cmd('Bigger')
     vim.opt.lbr = true
@@ -21,6 +22,7 @@ vim.api.nvim_create_autocmd('User', {
     if not M.active then return end
     M.active = false
 
+    vim.g.neovide_fullscreen = false
     vim.cmd('Smaller')
     vim.cmd('Smaller')
     vim.opt.lbr = false
