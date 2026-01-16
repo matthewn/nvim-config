@@ -60,14 +60,12 @@ bootstrap_paq {
   'Vimjas/vim-python-pep8-indent', -- fix python indenting
   'cakebaker/scss-syntax.vim', -- essential: syntax for scss (non-ts)
   'chrisbra/Colorizer', -- show hex colors, etc. with :ColorToggle
-  'dhruvasagar/vim-open-url', -- gB to open url
   'direnv/direnv.vim', -- direnv integration
   'gioele/vim-autoswap', -- essential: never ever bug me about swap files
   'gorkunov/smartpairs.vim', -- 'vv' for quick visual selection
   'hail2u/vim-css3-syntax', -- essential: syntax for css3 (non-ts)
   'justinmk/vim-gtfo', -- got/T for a term; gof/F for a filemanager
   'junegunn/goyo.vim', -- replaces vimroom
-  'junegunn/gv.vim', -- git browser at :GV :GV! :GV? (replaces cohama/agit.vim for now)
   'keith/investigate.vim', -- gK for vimhelp on word at cursor
   'milkypostman/vim-togglelist', -- <leader>q toggles quickfix; <leader>l toggles location
   'rbong/vim-buffest',  -- register/macro editing
