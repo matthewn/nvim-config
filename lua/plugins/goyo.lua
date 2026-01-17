@@ -12,7 +12,8 @@ vim.api.nvim_create_autocmd('User', {
     vim.g.neovide_fullscreen = true
     vim.cmd('Bigger')
     vim.cmd('Bigger')
-    vim.opt.lbr = true
+    vim.opt_local.lbr = true
+    vim.opt_local.spell = true
   end,
 })
 
@@ -25,6 +26,7 @@ vim.api.nvim_create_autocmd('User', {
     vim.g.neovide_fullscreen = false
     vim.cmd('Smaller')
     vim.cmd('Smaller')
-    vim.opt.lbr = false
+    vim.opt_local.lbr = false
+    vim.opt_local.spell = false
   end,
 })
