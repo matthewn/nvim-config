@@ -81,10 +81,11 @@ keymap('n', '<leader>#8', ':set tabstop=8<cr><esc>:set softtabstop=8<cr><esc>:se
 
 -- bug out with gs ("get stuffed!") (this used to point at bufkill.vim's :BD)
 vim.keymap.set('n', 'gs', function()
+  local bufname = vim.api.nvim_buf_get_name(0)
   local buftype = vim.bo.buftype
   local wins = vim.api.nvim_tabpage_list_wins(0)
   local specials = { 'help', 'quickfix', 'loclist', 'nofile' }
-  if vim.tbl_contains(specials, buftype) and #wins > 1 then
+  if (vim.tbl_contains(specials, buftype) or bufname:match("paq%.log$")) and #wins > 1 then
     vim.cmd('quit')  -- close special window & remove its buffer
   else
     if package.loaded['barbar'] then
