@@ -40,15 +40,37 @@ vim.g.gutentags_cache_dir = vim.fn.stdpath('data') .. '/tags'
 vim.g.matchup_transmute_enabled = 1 -- enable paired tag renaming (replaces tagalong)
 
 -- vim-startify - start screen + sane sessions (replaces vim-sessionist)
+local function tweaked_sessions_list()
+  local items = {}
+  local sessions = vim.fn['startify#session_list']('')
+  local init_session = nil
+  local other_sessions = {}
+  for _, session in ipairs(sessions) do
+    if session == 'init' then
+      init_session = session
+    else
+      table.insert(other_sessions, session)
+    end
+  end
+  -- add init session first if it exists
+  if init_session then
+    table.insert(items, { line = init_session, cmd = 'SLoad ' .. init_session, type = 'session' })
+  end
+  -- add other sessions
+  for _, session in ipairs(other_sessions) do
+    table.insert(items, { line = session, cmd = 'SLoad ' .. session, type = 'session' })
+  end
+  return items
+end
+
 vim.g.startify_bookmarks = {
   { b = '~/.bashrc' },
-  { v = vim.env.MYVIMRC },
 }
 vim.g.startify_lists = {
-  { type = 'sessions',  header = { '   Sessions' } },
-  { type = 'bookmarks', header = { '   Bookmarks' } },
+  { type = tweaked_sessions_list, header = {'   Sessions'} },
   { type = 'files',     header = { '   MRU' } },
-  { type = 'commands',  header = { '   Commands' } },
+  { type = 'bookmarks', header = { '   Bookmarks' } },
+  { type = 'commands',  header = { '   Commands' } }, -- unused for now
 }
 vim.g.startify_session_persistence = 1
 vim.g.startify_files_number = 4
