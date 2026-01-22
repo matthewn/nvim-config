@@ -37,13 +37,16 @@ require('nvim-surround').setup()
 require('rooter').setup()
 require('time-machine').setup({})
 
+-- startup
 if vim.fn.has('vim_starting') == 1 then
+  --colorscheme
   local ok = pcall(vim.cmd.colorscheme, 'neogotham')
   if not ok then
     vim.cmd.colorscheme('darkblue')
   end
   vim.o.background = 'dark'
 
+  -- neovide-only
   if vim.g.neovide then
     vim.opt.lines = 46
     vim.opt.columns = 90

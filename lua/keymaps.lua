@@ -79,10 +79,12 @@ keymap('n', '<leader>#2', ':set tabstop=2<cr><esc>:set softtabstop=2<cr><esc>:se
 keymap('n', '<leader>#4', ':set tabstop=4<cr><esc>:set softtabstop=4<cr><esc>:set shiftwidth=4<cr>')
 keymap('n', '<leader>#8', ':set tabstop=8<cr><esc>:set softtabstop=8<cr><esc>:set shiftwidth=4<cr>')
 
--- bug out with bd (this used to point at bufkill.vim's :BD)
-vim.keymap.set('n', 'bd', function()
+-- bug out with gs ("get stuffed!") (this used to point at bufkill.vim's :BD)
+vim.keymap.set('n', 'gs', function()
   local buftype = vim.bo.buftype
-  if vim.tbl_contains({'help', 'quickfix', 'loclist'}, buftype) then
+  local wins = vim.api.nvim_tabpage_list_wins(0)
+  local specials = { 'help', 'quickfix', 'loclist', 'nofile' }
+  if vim.tbl_contains(specials, buftype) and #wins > 1 then
     vim.cmd('quit')  -- close special window & remove its buffer
   else
     if package.loaded['barbar'] then
@@ -107,13 +109,10 @@ keymap('v', '<leader>a', 'di<a href=""<esc>mza><esc>pa</a><esc>`zi')
 vim.cmd([[cmap w!! w !sudo tee % >/dev/null]])
 
 
--- mappings for plugins
+-- mappings for plugins that don't have their own lua config files
 
 -- bufonly
 keymap('n', '<leader>o', ':BufOnly<cr>', { silent = true })
-
--- ctrlsf
-keymap('n', '<leader>F', ':CtrlSF<space>')
 
 -- easyalign
 keymap('v', '<cr>', '<plug>(EasyAlign)')
@@ -132,6 +131,5 @@ keymap('n', '<leader>sd', ':SDelete ')
 keymap('n', '<leader>so', ':SLoad ')
 keymap('n', '<leader>ss', ':SSave!<cr>', { silent = true })
 
--- timemachine
+-- timemachine (gundo replacement)
 keymap('n', '<leader>u', '<cmd>TimeMachineToggle<cr>', { silent = true })
-
