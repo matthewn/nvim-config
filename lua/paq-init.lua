@@ -79,11 +79,11 @@ bootstrap_paq {
   'vim-python/python-syntax', -- improved python syntax highlighting (non-ts)
 
   -- vimscript plugins, have config in globals.lua
-  'Valloric/MatchTagAlways',
-  'andymass/vim-matchup',
-  'junegunn/vim-easy-align',
-  'kovisoft/slimv',
-  'ludovicchabant/vim-gutentags',
-  'mhinz/vim-startify',
-  'vim-vdebug/vdebug',
+  'Valloric/MatchTagAlways', -- html tag highlighting
+  'andymass/vim-matchup', -- replaces vim's matchit plugin
+  'junegunn/vim-easy-align', -- visual mode: press enter to align stuff
+  'kovisoft/slimv', -- <leader>c for SBCL REPL (emacs SLIME for vim)
+  'ludovicchabant/vim-gutentags', -- essential automated ctags mgr (replaces vim-easytags)
+  'mhinz/vim-startify', -- start screen + sane sessions (replaces vim-sessionist)
+  'vim-vdebug/vdebug', -- modern vim debugger
 }

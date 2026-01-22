@@ -5,7 +5,7 @@
 -- not being installed in every venv we have
 vim.g.python3_host_prog = '/usr/bin/python3'
 
--- MatchTagAlways - html tag highlighting
+-- MatchTagAlways
 vim.g.mta_filetypes = {
   html  = 1,
   xhtml = 1,
@@ -15,11 +15,11 @@ vim.g.mta_filetypes = {
 }
 vim.g.mta_use_matchparen_group = 0
 
--- slimv - <leader>c for SBCL REPL (emacs SLIME for vim)
+-- slimv
 vim.g.lisp_rainbow = 1
 vim.g.slimv_repl_split = 2 -- REPL below code
 
--- vdebug - modern vim debugger
+-- vdebug
 vim.g.vdebug_options = { break_on_open = 0 }
 vim.g.vdebug_keymap = {
   run            = '<leader>D',
@@ -33,13 +33,13 @@ vim.g.vdebug_keymap = {
   eval_visual    = '<leader>E',
 }
 
--- vim-gutentags - essential automated ctags mgr (replaces vim-easytags)
+-- vim-gutentags
 vim.g.gutentags_cache_dir = vim.fn.stdpath('data') .. '/tags'
 
--- vim-matchup - replaces vim's matchit plugin
+-- vim-matchup
 vim.g.matchup_transmute_enabled = 1 -- enable paired tag renaming (replaces tagalong)
 
--- vim-startify - start screen + sane sessions (replaces vim-sessionist)
+-- vim-startify
 local function tweaked_sessions_list()
   local items = {}
   local sessions = vim.fn['startify#session_list']('')
