@@ -79,23 +79,6 @@ keymap('n', '<leader>#2', ':set tabstop=2<cr><esc>:set softtabstop=2<cr><esc>:se
 keymap('n', '<leader>#4', ':set tabstop=4<cr><esc>:set softtabstop=4<cr><esc>:set shiftwidth=4<cr>')
 keymap('n', '<leader>#8', ':set tabstop=8<cr><esc>:set softtabstop=8<cr><esc>:set shiftwidth=4<cr>')
 
--- bug out with gs ("get stuffed!") (this used to point at bufkill.vim's :BD)
-vim.keymap.set('n', 'gs', function()
-  local bufname = vim.api.nvim_buf_get_name(0)
-  local buftype = vim.bo.buftype
-  local wins = vim.api.nvim_tabpage_list_wins(0)
-  local specials = { 'help', 'quickfix', 'loclist', 'nofile' }
-  if (vim.tbl_contains(specials, buftype) or bufname:match("paq%.log$")) and #wins > 1 then
-    vim.cmd('quit')  -- close special window & remove its buffer
-  else
-    if package.loaded['barbar'] then
-      vim.cmd('BufferClose') -- delete normal buffer, barbar-style
-    else
-      vim.cmd('bd') -- delete normal buffer
-    end
-  end
-end, { silent = true })
-
 -- toggle cursorcolumn
 keymap('n', '<leader>L', ':execute "setlocal colorcolumn=" . (&colorcolumn == "" ? "80" : "")<cr>', { silent = true })
 
@@ -108,6 +91,31 @@ keymap('v', '<leader>a', 'di<a href=""<esc>mza><esc>pa</a><esc>`zi')
 
 -- write with sudo, dammit
 vim.cmd([[cmap w!! w !sudo tee % >/dev/null]])
+
+-- bug out with gs ("get stuffed!") (this used to point at bufkill.vim's :BD)
+vim.keymap.set('n', 'gs', function()
+  local bufname = vim.api.nvim_buf_get_name(0)
+  local buftype = vim.bo.buftype
+  local wins = vim.api.nvim_tabpage_list_wins(0)
+  local specials = { 'help', 'quickfix', 'loclist', 'nofile' }
+  local is_special =
+    vim.tbl_contains(specials, buftype)
+    or bufname:match('paq%.log$')
+  local function is_real(win)
+    return vim.fn.win_gettype(win) == ''
+  end
+  local real_wins = vim.tbl_filter(is_real, wins)
+
+  if is_special and #real_wins > 1 then
+    vim.cmd('quit')
+  else
+    if package.loaded['barbar'] then
+      vim.cmd('BufferClose') -- delete normal buffer, barbar-style
+    else
+      vim.cmd('bd') -- delete normal buffer
+    end
+  end
+end, { silent = true })
 
 
 -- mappings for plugins that don't have their own lua config files
