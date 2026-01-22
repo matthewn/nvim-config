@@ -18,6 +18,16 @@ autocmd('BufReadPost', {
   end,
 })
 
+-- neogit: keep focus on log when selecting a commit
+autocmd('FileType', {
+  pattern = 'NeogitCommitView',
+  callback = function()
+    vim.schedule(function()
+      vim.cmd('wincmd p')
+    end)
+  end,
+})
+
 -- close quickfix on <cr>
 autocmd('FileType', {
   group = augroup,
