@@ -62,8 +62,8 @@ keymap('n', '<leader>zT', 'Vatzf')
 -- shortcut to write current buffer
 keymap('n', '<leader>w', ':w!<cr>')
 
--- g% does :source %
-keymap('n', 'g%', ':source %<cr>')
+-- <leader>% does :source %
+keymap('n', '<leader>%', ':source %<cr>')
 
 -- make moving between windows easier
 keymap('n', '<C-h>', '<C-w>h')
