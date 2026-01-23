@@ -10,7 +10,7 @@ require('aerial').setup({
       ['<c-s>'] = 'actions.jump_split',
       ['h'] = 'actions.left',
       ['l'] = 'actions.right',
-      ['<esc>'] = 'actions.close',
+      ['q'] = 'actions.close',
     },
   },
 })
