@@ -160,7 +160,7 @@ local function get_minimap_width()
 end
 
 -- keymap to toggle minimap width
-vim.keymap.set('n', '<leader>mm', function()
+vim.keymap.set('n', '<leader>M', function()
   local width = get_minimap_width()
   -- fallback to configured width if minimap not open
   width = width or minimap.config.window.width
