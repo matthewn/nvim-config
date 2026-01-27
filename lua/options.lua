@@ -11,6 +11,7 @@ opt.iskeyword:remove('_') -- make _ act as a word boundary
 opt.mouse = 'a'
 opt.nrformats = '' -- force decimal-based arithmetic on ctrl-a/x
 opt.scrolloff = 10
+opt.sessionoptions:append('globals') -- so sessions include barbar buffer order
 opt.showmatch = true -- highlight matching parens, etc.
 opt.splitbelow = true -- make preview window open to bottom
 opt.splitright = true -- make :vert <whatever> open to right
