@@ -12,7 +12,7 @@ local function bootstrap_paq(packages)
   vim.cmd.packadd('paq-nvim')
   local paq = require('paq')
   if first_install then
-    vim.notify('Installing plugins... If prompted, hit Enter to continue.')
+    vim.notify('Installing plugins...')
   end
 
   -- read and install packages
@@ -28,7 +28,7 @@ bootstrap_paq {
   'NeogitOrg/neogit', -- git git git
   'chrishrb/gx.nvim', -- improved 'gx' command (includes opening github links from this file!)
   'folke/todo-comments.nvim', -- highlight TODO and such
-  'j-hui/fidget.nvim', -- toast-like lsp messages & notifications
+  'j-hui/fidget.nvim', -- toast-like LSP messages & notifications
   'lewis6991/gitsigns.nvim', -- git in the gutter
   'lukas-reineke/indent-blankline.nvim', -- replaces vim-indent-guides
   'kylechui/nvim-surround', -- vim-surround replacement
@@ -36,16 +36,16 @@ bootstrap_paq {
   'neovim/nvim-lspconfig', -- LSP utilities & example configurations
   'numtostr/BufOnly.nvim', -- close all buffers but current
   'nvim-lua/plenary.nvim', -- used by telescope
-  'nvim-mini/mini.nvim', -- multi-tool: files, statusline, completion & more
-  'nvim-telescope/telescope.nvim', -- fuzzy finder
+  'nvim-mini/mini.nvim', -- multi-tool: filer, statusline, scrollbars, completion & more
+  'nvim-telescope/telescope.nvim', -- fuzzy finder (replaces fzf.vim)
   'nvim-tree/nvim-web-devicons', -- used by barbar, mini.icons, etc.
-  { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' }, -- drives neovim 0.11 lsp configs
+  { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' }, -- drives neovim 0.11 treesitter configs
   'nvim-treesitter/nvim-treesitter-context', -- show top of long functions
-  'romgrk/barbar.nvim', -- bufferline replacement w/ rearrangeable tabs
+  'romgrk/barbar.nvim', -- bufferline replacement (w/ rearrangeable tabs!)
   'sindrets/diffview.nvim', -- used with neogit
-  'stevearc/aerial.nvim', -- code outline window
-  'stevearc/conform.nvim', -- :Format (for black and such)
-  { 'volvofixthis/e-kaput.nvim', branch = 'fixes' }, -- floating lsp diagnostics
+  'stevearc/aerial.nvim', -- code outline window (replaces Vista.vim)
+  'stevearc/conform.nvim', -- provides :Format (for black and such)
+  { 'volvofixthis/e-kaput.nvim', branch = 'fixes' }, -- floating LSP diagnostics
   'wsdjeg/rooter.nvim', -- auto-cd to project root
   'y3owk1n/time-machine.nvim', -- undotree replacement
   'zaldih/themery.nvim', -- colorscheme browser at :Themery
