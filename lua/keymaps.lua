@@ -135,10 +135,8 @@ keymap('n', '<C-S-l>', ':SidewaysRight<cr>', { silent = true })
 
 -- startify
 keymap('n', '<leader><esc>', ':Startify<cr>')
-keymap('n', '<leader>sc', ':SClose<cr>', { silent = true })
-keymap('n', '<leader>sd', ':SDelete ')
-keymap('n', '<leader>so', ':SLoad ')
-keymap('n', '<leader>ss', ':SSave!<cr>', { silent = true })
+keymap('n', '<leader>XX', ':SClose<cr>', { silent = true })
+keymap('n', '<leader>SS', ':SSave!<cr>', { silent = true })
 
 -- timemachine (gundo replacement)
 keymap('n', '<leader>u', '<cmd>TimeMachineToggle<cr>', { silent = true })
