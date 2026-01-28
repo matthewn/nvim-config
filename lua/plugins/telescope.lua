@@ -50,9 +50,12 @@ require('telescope').setup{
 }
 
 local keymap = vim.keymap.set
-keymap('n', '<leader>f', '<cmd>Telescope git_files<cr>', { silent = true })
-keymap('n', '<leader>F', '<cmd>Telescope find_files<cr>', { silent = true })
-keymap('n', '<leader>m', '<cmd>Telescope oldfiles<cr>', { silent = true })
-keymap('n', '<leader>b', '<cmd>Telescope git_bcommits<cr>', { silent = true })
-keymap('n', '<leader>g', '<cmd>Telescope live_grep<cr>', { silent = true })
-keymap('n', '<leader>r', '<cmd>Telescope registers<cr>', { silent = true })
+keymap('n', '<leader>f', '<cmd>Telescope git_files<cr>')
+keymap('n', '<leader>F', '<cmd>Telescope find_files<cr>')
+keymap('n', '<leader>m', '<cmd>Telescope oldfiles<cr>')
+keymap('n', '<leader>b', '<cmd>Telescope git_bcommits<cr>')
+keymap('n', '<leader>g', '<cmd>Telescope live_grep<cr>')
+keymap('n', '<leader>r', '<cmd>Telescope registers<cr>')
+keymap('n', '<leader>k', '<cmd>Telescope commands<cr>')
+keymap('n', '<leader>h', '<cmd>Telescope help_tags<cr>')
+keymap('n', '<leader>O', '<cmd>Telescope vim_options<cr>')
