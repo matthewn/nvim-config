@@ -9,8 +9,12 @@ require('telescope').setup{
     },
   },
   pickers = {
-    -- redefine the behavior of the git_bcommits picker:
-    -- open old versions in temp/readonly buffers rather than checking them out
+    -- make find_files include files ignored by git
+    find_files = {
+      no_ignore = true,
+    },
+    -- make git_bcommits picker open old versions in temp/readonly buffers
+    -- (rather than checking them out -- destructive!)
     git_bcommits = {
       attach_mappings = function(prompt_bufnr)
         local actions = require('telescope.actions')
@@ -46,9 +50,9 @@ require('telescope').setup{
 }
 
 local keymap = vim.keymap.set
-keymap('n', '<leader>m', '<cmd>Telescope oldfiles<cr>', { silent = true })
 keymap('n', '<leader>f', '<cmd>Telescope git_files<cr>', { silent = true })
 keymap('n', '<leader>F', '<cmd>Telescope find_files<cr>', { silent = true })
+keymap('n', '<leader>m', '<cmd>Telescope oldfiles<cr>', { silent = true })
 keymap('n', '<leader>b', '<cmd>Telescope git_bcommits<cr>', { silent = true })
 keymap('n', '<leader>g', '<cmd>Telescope live_grep<cr>', { silent = true })
 keymap('n', '<leader>r', '<cmd>Telescope registers<cr>', { silent = true })
