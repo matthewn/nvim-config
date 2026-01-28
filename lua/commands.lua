@@ -16,7 +16,7 @@ local function resolve_hl(name)
 end
 
 -- :HLGroup returns tree-sitter or syntax engine group under cursor
-local function hl_group_under_cursor()
+vim.api.nvim_create_user_command('HLGroup', function()
   local bufnr = vim.api.nvim_get_current_buf()
   local row, col = unpack(vim.api.nvim_win_get_cursor(0))
   row = row - 1 -- TS uses 0-based row
@@ -56,6 +56,42 @@ local function hl_group_under_cursor()
   else
     print(table.concat(out, '\n'))
   end
-end
+end, {})
 
-vim.api.nvim_create_user_command('HLGroup', hl_group_under_cursor, {})
+-- :LeaderFree shows unused <leader> combos
+vim.api.nvim_create_user_command('LeaderFree', function()
+  local leader = vim.g.mapleader or '\\'
+  local used = {}
+  local pleader = leader:gsub('([%%%^%$%(%)%.%[%]%*%+%-%?])', '%%%1')
+
+  for _, m in ipairs(vim.api.nvim_get_keymap('n')) do
+    local key = m.lhs:match('^' .. pleader .. '(.?)$')
+    if key then used[key] = true end
+  end
+
+  local function collect(range)
+    local t = {}
+    for _, r in ipairs(range) do
+      for c = string.byte(r[1]), string.byte(r[2]) do
+        local k = string.char(c)
+        if not used[k] then table.insert(t, '<leader>'..k) end
+      end
+    end
+    return t
+  end
+
+  local lower = collect({{'a','z'}})
+  local upper = collect({{'A','Z'}})
+  local numbers = collect({{'0','9'}})
+
+  local punct = {}
+  for i = 1, #[[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]] do
+    local k = ([[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]]):sub(i,i)
+    if not used[k] then table.insert(punct, '<leader>'..k) end
+  end
+
+  for _, k in ipairs(lower) do print(k) end
+  for _, k in ipairs(upper) do print(k) end
+  for _, k in ipairs(numbers) do print(k) end
+  for _, k in ipairs(punct) do print(k) end
+end, {})
