@@ -9,11 +9,14 @@ vim.api.nvim_create_autocmd('User', {
     M.active = true
 
     -- vim.cmd("colorscheme darkblue")
-    vim.g.neovide_fullscreen = true
-    vim.cmd('Bigger')
-    vim.cmd('Bigger')
+    if vim.g.neovide then
+      vim.g.neovide_fullscreen = true
+      vim.cmd('Bigger')
+      vim.cmd('Bigger')
+    end
     vim.opt_local.lbr = true
     vim.opt_local.spell = true
+
   end,
 })
 
@@ -23,9 +26,11 @@ vim.api.nvim_create_autocmd('User', {
     if not M.active then return end
     M.active = false
 
-    vim.g.neovide_fullscreen = false
-    vim.cmd('Smaller')
-    vim.cmd('Smaller')
+    if vim.g.neovide then
+      vim.g.neovide_fullscreen = false
+      vim.cmd('Smaller')
+      vim.cmd('Smaller')
+    end
     vim.opt_local.lbr = false
     vim.opt_local.spell = false
   end,

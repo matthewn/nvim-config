@@ -58,9 +58,9 @@ vim.g.startify_bookmarks = {
 }
 vim.g.startify_lists = {
   { type = tweaked_sessions_list, header = {'   Sessions'} },
-  { type = 'files',     header = { '   MRU' } },
+  { type = 'files', header = { '   MRU' } },
   { type = 'bookmarks', header = { '   Bookmarks' } },
-  { type = 'commands',  header = { '   Commands' } }, -- unused for now
+  { type = 'commands', header = { '   Commands' } }, -- unused for now
 }
 vim.g.startify_session_persistence = 1
 vim.g.startify_files_number = 5
