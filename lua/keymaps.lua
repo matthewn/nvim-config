@@ -44,9 +44,6 @@ keymap('i', ';;', '<C-x><C-o>')
 -- ctrl-l fixes most recent misspelling in insert mode
 keymap('i', '<C-l>', '<C-g>u<Esc>[s1z=`]a<C-g>u')
 
--- shortcut to init.vim/lua
-keymap('n', '<leader>v', ':e $MYVIMRC<cr>')
-
 -- clear the search highlights
 keymap('n', 'g<space>', ':nohlsearch<cr>', { silent = true })
 
