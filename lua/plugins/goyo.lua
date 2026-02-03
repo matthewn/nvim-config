@@ -1,5 +1,3 @@
-vim.g.goyo_height = '90%'
-
 -- auto-start Goyo for files in certain dirs (wherever they may be)
 -- and auto-close Goyo when the last Goyo-eligible file is closed
 
@@ -34,26 +32,76 @@ vim.api.nvim_create_autocmd('BufDelete', {
 })
 
 -- customize the Goyo environment
--- (GoyoEnter and GoyoLeave callbacks)
+-- (includes GoyoEnter and GoyoLeave callbacks)
 
 local M = {}
 M.active = false
+M.show_status = true
+
+function _G.goyo_word_count()
+  local words = vim.fn.wordcount()
+  local current = words.visual_words or words.cursor_words or 0
+  return string.format('Word %d of %d', current, words.words or 0)
+end
+
+function _G.toggle_goyo_statusline()
+  if not M.active then return end
+  M.show_status = not M.show_status
+  if M.show_status then
+    vim.opt.statusline = ' %{v:lua.goyo_word_count()} %= %p%% '
+  else
+    vim.opt.statusline = ' '
+  end
+  vim.cmd('redrawstatus')
+end
 
 vim.api.nvim_create_autocmd('User', {
   pattern = 'GoyoEnter',
   callback = function()
     if M.active then return end
-    M.active = true
 
-    -- vim.cmd("colorscheme darkblue")
-    if vim.g.neovide then
-      vim.g.neovide_fullscreen = true
-      vim.cmd('Bigger')
-      vim.cmd('Bigger')
+    -- prevent edge case where Startify gets Goyo-ed
+    if vim.bo.filetype == 'startify' or vim.api.nvim_buf_get_name(0) == '' then
+      vim.cmd('Goyo!')
+      return
     end
+
+    M.active = true
+    M.show_status = true
+
+    vim.g.goyo_height = '97%'
+    vim.b.ministatusline_disable = true
+
+    vim.keymap.set(
+      'n',
+      '<leader><space>',
+      '<cmd>lua toggle_goyo_statusline()<cr>',
+      { buffer = true, desc = 'Toggle Goyo Statusline' }
+    )
+
+    if vim.g.neovide then
+      M.original_scale = vim.g.neovide_scale_factor
+      vim.g.neovide_scale_factor = 1.2
+      vim.g.neovide_fullscreen = true
+    end
+
+    vim.schedule(function()
+      if not M.active then return end
+
+      vim.opt.laststatus = 3
+      vim.opt.statusline = ' %{v:lua.goyo_word_count()} %= %p%% '
+
+      vim.cmd([[
+        hi WinSeparator guifg=bg guibg=bg
+        hi StatusLine guifg=gray guibg=NONE gui=none
+        hi StatusLineNC guifg=bg guibg=bg gui=none
+      ]])
+
+      vim.cmd('redraw!')
+    end)
+
     vim.opt_local.lbr = true
     vim.opt_local.spell = true
-
   end,
 })
 
@@ -63,11 +111,23 @@ vim.api.nvim_create_autocmd('User', {
     if not M.active then return end
     M.active = false
 
+    pcall(vim.keymap.del, 'n', '<leader><space>', { buffer = true })
+
+    vim.b.ministatusline_disable = false
+    vim.opt.laststatus = 3
+    vim.opt.statusline = nil
+
+    vim.cmd([[
+      hi clear WinSeparator
+      hi clear StatusLine
+      hi clear StatusLineNC
+    ]])
+
     if vim.g.neovide then
+      vim.g.neovide_scale_factor = M.original_scale or 1.0
       vim.g.neovide_fullscreen = false
-      vim.cmd('Smaller')
-      vim.cmd('Smaller')
     end
+
     vim.opt_local.lbr = false
     vim.opt_local.spell = false
   end,
