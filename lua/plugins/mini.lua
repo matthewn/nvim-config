@@ -1,4 +1,3 @@
-require('mini.completion').setup()
 require('mini.icons').setup()
 require('mini.splitjoin').setup()
 require('mini.statusline').setup({ use_icons = vim.g.neovide and true or false })
