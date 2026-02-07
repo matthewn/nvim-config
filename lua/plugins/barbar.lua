@@ -2,7 +2,7 @@ vim.g.barbar_auto_setup = false -- req'd to make setup() work
 
 require('barbar').setup {
   -- show filetype icons if gui; no close buttons ever
-  icons = { button = false, filetype = { enabled = vim.g.neovide and true or false } },
+  icons = { button = false, filetype = { enabled = vim.g.neovide ~= nil } },
 }
 
 -- barbar/startify integration (ensure barbar buffer order is saved)

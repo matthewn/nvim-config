@@ -74,7 +74,7 @@ keymap('', '<leader>e', ':e <C-R>=expand("%:p:h") . "/" <cr>')
 -- tab stop changes
 keymap('n', '<leader>#2', ':set tabstop=2<cr><esc>:set softtabstop=2<cr><esc>:set shiftwidth=2<cr>')
 keymap('n', '<leader>#4', ':set tabstop=4<cr><esc>:set softtabstop=4<cr><esc>:set shiftwidth=4<cr>')
-keymap('n', '<leader>#8', ':set tabstop=8<cr><esc>:set softtabstop=8<cr><esc>:set shiftwidth=4<cr>')
+keymap('n', '<leader>#8', ':set tabstop=8<cr><esc>:set softtabstop=8<cr><esc>:set shiftwidth=8<cr>')
 
 -- toggle cursorcolumn
 keymap('n', '<leader>L', ':execute "setlocal colorcolumn=" . (&colorcolumn == "" ? "80" : "")<cr>', { silent = true })
