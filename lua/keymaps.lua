@@ -118,22 +118,22 @@ end, { silent = true })
 -- mappings for plugins that don't have their own lua config files
 
 -- bufonly
-keymap('n', '<leader>o', ':BufOnly<cr>', { silent = true })
+keymap('n', '<leader>o', ':BufOnly<cr>')
 
 -- easyalign
 keymap('v', '<cr>', '<plug>(EasyAlign)')
 
 -- neogit
-keymap('n', '<leader>G', ':Neogit<cr>', { silent = true })
+keymap('n', '<leader>G', ':Neogit<cr>')
 
 -- sideways.vim
-keymap('n', '<C-S-h>', ':SidewaysLeft<cr>', { silent = true })
-keymap('n', '<C-S-l>', ':SidewaysRight<cr>', { silent = true })
+keymap('n', '<C-S-h>', ':SidewaysLeft<cr>')
+keymap('n', '<C-S-l>', ':SidewaysRight<cr>')
 
 -- startify
 keymap('n', '<leader><esc>', ':Startify<cr>')
-keymap('n', '<leader>XX', ':SClose<cr>', { silent = true })
-keymap('n', '<leader>SS', ':SSave!<cr>', { silent = true })
+keymap('n', '<leader>XX', ':SClose<cr>')
+keymap('n', '<leader>SS', ':SSave!<cr>')
 
 -- timemachine (gundo replacement)
-keymap('n', '<leader>u', '<cmd>TimeMachineToggle<cr>', { silent = true })
+keymap('n', '<leader>u', '<cmd>TimeMachineToggle<cr>')
