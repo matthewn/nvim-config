@@ -40,10 +40,9 @@ local function smart_s_tab()
   return vim.api.nvim_replace_termcodes('<s-tab>', true, true, true)
 end
 
-vim.keymap.set('i', '<tab>', smart_tab, { expr = true })
-vim.keymap.set('i', '<s-tab>', smart_s_tab, { expr = true })
-vim.keymap.set('i', '<cr>', 'pumvisible() ? "\\<C-y>" : "\\<CR>"', { expr = true })
-
+vim.keymap.set('i', '<tab>', smart_tab, { expr = true, desc = 'Smart tab completion' })
+vim.keymap.set('i', '<s-tab>', smart_s_tab, { expr = true, desc = 'Smart shift-tab completion' })
+vim.keymap.set('i', '<cr>', 'pumvisible() ? "\\<C-y>" : "\\<CR>"', { expr = true, desc = 'Smart enter (accept completion)' })
 
 -- mini.trailspace: show / remove trailing whitespace
 require('mini.trailspace').setup()

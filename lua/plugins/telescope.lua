@@ -50,12 +50,13 @@ require('telescope').setup{
 }
 
 local keymap = vim.keymap.set
-keymap('n', '<leader>f', '<cmd>Telescope git_files<cr>')
-keymap('n', '<leader>F', '<cmd>Telescope find_files<cr>')
-keymap('n', '<leader>m', '<cmd>Telescope oldfiles<cr>')
-keymap('n', '<leader>b', '<cmd>Telescope git_bcommits<cr>')
-keymap('n', '<leader>g', '<cmd>Telescope live_grep<cr>')
-keymap('n', '<leader>r', '<cmd>Telescope registers<cr>')
-keymap('n', '<leader>k', '<cmd>Telescope commands<cr>')
-keymap('n', '<leader>h', '<cmd>Telescope help_tags<cr>')
-keymap('n', '<leader>O', '<cmd>Telescope vim_options<cr>')
+keymap('n', '<leader>f', '<cmd>Telescope git_files<cr>', { desc = 'Find git files' })
+keymap('n', '<leader>F', '<cmd>Telescope find_files<cr>', { desc = 'Find all files' })
+keymap('n', '<leader>m', '<cmd>Telescope oldfiles<cr>', { desc = 'Recent files (MRU)' })
+keymap('n', '<leader>b', '<cmd>Telescope git_bcommits<cr>', { desc = 'Buffer git commits' })
+keymap('n', '<leader>g', '<cmd>Telescope live_grep<cr>', { desc = 'Live grep in project' })
+keymap('n', '<leader>r', '<cmd>Telescope registers<cr>', { desc = 'View registers' })
+keymap('n', '<leader>k', '<cmd>Telescope commands<cr>', { desc = 'Search commands' })
+keymap('n', '<leader>K', '<cmd>Telescope keymaps<cr>', { desc = 'Search keymaps' })
+keymap('n', '<leader>h', '<cmd>Telescope help_tags<cr>', { desc = 'Search help tags' })
+keymap('n', '<leader>O', '<cmd>Telescope vim_options<cr>', { desc = 'Search vim options' })

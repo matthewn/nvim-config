@@ -15,4 +15,4 @@ require('aerial').setup({
   },
 })
 
-vim.keymap.set('n', '<leader>t', ':AerialNavToggle<cr>', { silent = true })
+vim.keymap.set('n', '<leader>t', ':AerialNavToggle<cr>', { silent = true, desc = 'Toggle code outline' })
