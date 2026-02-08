@@ -13,7 +13,7 @@ require('lsp.pylsp')
 require('lsp.stylelint_lsp')
 
 -- plugins
-require('paq-init')
+require('mini-deps')
 require('plugins.aerial')
 require('plugins.barbar')
 require('plugins.conform')
