@@ -1,11 +1,20 @@
 local autocmd = vim.api.nvim_create_autocmd
 local augroup = vim.api.nvim_create_augroup('init', { clear = true })
 
--- jump to last cursor location unless editing a git commit
-autocmd('BufReadPost', {
+
+vim.api.nvim_create_autocmd('FileType', {
+  desc = 'Enable treesitter on some filetypes',
+  pattern = {'python', 'css', 'javascript', 'typescript', 'html', 'htmldjango', 'json'},
   group = augroup,
-  pattern = '*',
+  callback = function()
+    vim.treesitter.start()
+  end,
+})
+
+autocmd('BufReadPost', {
   desc = 'Jump to last cursor location unless editing a git commit',
+  pattern = '*',
+  group = augroup,
   callback = function()
     local ft = vim.bo.filetype
     if not ft:match('^git') then
@@ -18,9 +27,10 @@ autocmd('BufReadPost', {
   end,
 })
 
--- neogit: keep focus on log when selecting a commit
 autocmd('FileType', {
+  desc = 'Neogit: keep focus on log when selecting a commit',
   pattern = 'NeogitCommitView',
+  group = augroup,
   callback = function()
     vim.schedule(function()
       vim.cmd('wincmd p')
@@ -28,21 +38,19 @@ autocmd('FileType', {
   end,
 })
 
--- close quickfix on <cr>
 autocmd('FileType', {
-  group = augroup,
-  pattern = 'qf',
   desc = 'Close quickfix on <cr>',
+  pattern = 'qf',
+  group = augroup,
   callback = function()
     vim.keymap.set('n', '<cr>', '<cr>:cclose<cr>', { buffer = true, silent = true })
   end,
 })
 
--- ensure '-' is treated as a keyword character in CSS
 autocmd('FileType', {
-  group = augroup,
-  pattern = 'css',
   desc = "Ensure '-' is treated as a keyword character in CSS",
+  pattern = 'css',
+  group = augroup,
   callback = function()
     vim.opt_local.iskeyword:append('-')
   end,
