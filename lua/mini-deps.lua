@@ -55,12 +55,10 @@ add({ source = 'https://gitlab.com/shmerl/neogotham.git' })
 -- vimscript plugins, no config
 add('AndrewRadev/sideways.vim') -- move arguments right/left
 add('Vimjas/vim-python-pep8-indent') -- fix python indenting
-add('cakebaker/scss-syntax.vim') -- essential: syntax for scss (non-ts)
 add('chrisbra/Colorizer') -- show hex colors, etc. with :ColorToggle
 add('direnv/direnv.vim') -- direnv integration
 add('gioele/vim-autoswap') -- essential: never ever bug me about swap files
 add('gorkunov/smartpairs.vim') -- 'vv' for quick visual selection
-add('hail2u/vim-css3-syntax') -- essential: syntax for css3 (non-ts)
 add('justinmk/vim-gtfo') -- got/T for a term; gof/F for a filemanager
 add('keith/investigate.vim') -- gK for vimhelp on word at cursor
 add('milkypostman/vim-togglelist') -- <leader>q toggles quickfix; <leader>l toggles location
@@ -72,7 +70,6 @@ add('tpope/vim-characterize') -- power-up for 'ga'
 add('tpope/vim-ragtag') -- useful html-related mappings
 add('tpope/vim-unimpaired') -- handy mappings
 add('tweekmonster/django-plus.vim') -- django niceties
-add('vim-python/python-syntax') -- improved python syntax highlighting (non-ts)
 
 -- vimscript plugins, have config in globals.lua or elsewhere
 add('Valloric/MatchTagAlways') -- html tag highlighting
