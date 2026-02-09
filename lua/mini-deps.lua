@@ -1,4 +1,6 @@
--- Clone 'mini.nvim' manually in a way that it gets managed by 'mini.deps'
+---@diagnostic disable: undefined-field, undefined-global
+
+-- clone 'mini.nvim' manually in a way that it gets managed by 'mini.deps'
 local path_package = vim.fn.stdpath('data') .. '/site/'
 local mini_path = path_package .. 'pack/deps/start/mini.nvim'
 if not vim.loop.fs_stat(mini_path) then
@@ -31,7 +33,10 @@ add('numtostr/BufOnly.nvim') -- close all buffers but current
 add('nvim-lua/plenary.nvim') -- used by telescope
 add('nvim-telescope/telescope.nvim') -- fuzzy finder (replaces fzf.vim)
 add('nvim-tree/nvim-web-devicons') -- used by barbar, mini.icons, etc.
-add({ source = 'nvim-treesitter/nvim-treesitter', hooks = { post_checkout = function() vim.cmd('TSUpdate') end } }) -- drives neovim 0.11 treesitter configs
+add({
+  source = 'nvim-treesitter/nvim-treesitter',
+  hooks = { post_checkout = function() vim.cmd('TSUpdate') end }
+}) -- drives neovim 0.11 treesitter configs
 add('nvim-treesitter/nvim-treesitter-context') -- show top of long functions
 add('romgrk/barbar.nvim') -- bufferline replacement (w/ rearrangeable tabs!)
 add('sindrets/diffview.nvim') -- used with neogit
@@ -57,11 +62,10 @@ add('gioele/vim-autoswap') -- essential: never ever bug me about swap files
 add('gorkunov/smartpairs.vim') -- 'vv' for quick visual selection
 add('hail2u/vim-css3-syntax') -- essential: syntax for css3 (non-ts)
 add('justinmk/vim-gtfo') -- got/T for a term; gof/F for a filemanager
-add('junegunn/goyo.vim') -- replaces vimroom
 add('keith/investigate.vim') -- gK for vimhelp on word at cursor
 add('milkypostman/vim-togglelist') -- <leader>q toggles quickfix; <leader>l toggles location
 add('rbong/vim-buffest')  -- register/macro editing
-add('rhysd/clever-f.vim') -- improve f and F searches; no need for ; or ,
+add('rhysd/clever-f.vim') -- improve f and F seches; no need for ; or ,
 add('thiderman/vim-reinhardt') -- for django-aware 'gf'
 add('tmhedberg/SimpylFold') -- improved folding for python
 add('tpope/vim-characterize') -- power-up for 'ga'
@@ -70,9 +74,10 @@ add('tpope/vim-unimpaired') -- handy mappings
 add('tweekmonster/django-plus.vim') -- django niceties
 add('vim-python/python-syntax') -- improved python syntax highlighting (non-ts)
 
--- vimscript plugins, have config in globals.lua
+-- vimscript plugins, have config in globals.lua or elsewhere
 add('Valloric/MatchTagAlways') -- html tag highlighting
 add('andymass/vim-matchup') -- replaces vim's matchit plugin
+add('junegunn/goyo.vim') -- replaces vimroom
 add('junegunn/vim-easy-align') -- visual mode: press enter to align stuff
 add('kovisoft/slimv') -- <leader>c for SBCL REPL (emacs SLIME for vim)
 add('ludovicchabant/vim-gutentags') -- essential automated ctags mgr (replaces vim-easytags)
