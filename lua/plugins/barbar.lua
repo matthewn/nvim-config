@@ -20,3 +20,5 @@ vim.keymap.set('n', '[b', '<cmd>BufferPrevious<cr>', { silent = true, desc = 'Pr
 vim.keymap.set('n', ']B', '<cmd>BufferLast<cr>', { silent = true, desc = 'Last buffer' })
 vim.keymap.set('n', '[B', '<cmd>BufferGoto 1<cr>', { silent = true, desc = 'First buffer' })
 vim.keymap.set('n', 'gb', '<cmd>BufferPick<cr>', { silent = true, desc = 'Pick buffer' })
+vim.keymap.set('n', '<leader><', '<cmd>BufferMovePrevious<cr>', { silent = true, desc = 'Move buffer to left' })
+vim.keymap.set('n', '<leader>>', '<cmd>BufferMoveNext<cr>', { silent = true, desc = 'Move buffer to left' })
