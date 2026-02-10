@@ -54,7 +54,7 @@ keymap('n', '<leader>W', ':silent set wrap!<cr>:set wrap?<cr>', { silent = true,
 keymap('n', '<leader>#', ':silent set number!<cr>:set number?<cr>', { silent = true, desc = 'Toggle line numbers' })
 
 -- fold tag
-keymap('n', '<leader>zT', 'Vatzf', { desc = 'Fold current HTML tag' })
+keymap('n', 'zT', 'Vatzf', { desc = 'Fold current HTML tag' })
 
 -- shortcut to write current buffer
 keymap('n', '<leader>w', ':w!<cr>', { desc = 'Write buffer (force)' })
