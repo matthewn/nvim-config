@@ -19,20 +19,6 @@ vim.g.mta_use_matchparen_group = 0
 vim.g.lisp_rainbow = 1
 vim.g.slimv_repl_split = 2 -- REPL below code
 
--- vdebug
-vim.g.vdebug_options = { break_on_open = 0 }
-vim.g.vdebug_keymap = {
-  run            = '<leader>D',
-  run_to_cursor  = '<Down>',
-  step_over      = '<Up>',
-  step_into      = '<Right>',
-  step_out       = '<Left>',
-  close          = '<F4>',
-  detach         = '<F5>',
-  set_breakpoint = '<leader>p',
-  eval_visual    = '<leader>E',
-}
-
 -- vim-gutentags
 vim.g.gutentags_cache_dir = vim.fn.stdpath('data') .. '/tags'
 

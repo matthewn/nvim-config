@@ -28,6 +28,8 @@ add('j-hui/fidget.nvim') -- toast-like LSP messages & notifications
 add('lewis6991/gitsigns.nvim') -- git in the gutter
 add('lukas-reineke/indent-blankline.nvim') -- replaces vim-indent-guides
 add('kylechui/nvim-surround') -- vim-surround replacement
+add('mfussenegger/nvim-dap') -- debug adapter protocol client (replaces vdebug)
+add('mfussenegger/nvim-dap-python') -- python debugger
 add('mfussenegger/nvim-lint') -- integrates non-LSP linters (makes eslint work)
 add('neovim/nvim-lspconfig') -- LSP utilities & example configurations
 add('numtostr/BufOnly.nvim') -- close all buffers but current
@@ -79,4 +81,3 @@ add('junegunn/vim-easy-align') -- visual mode: press enter to align stuff
 add('kovisoft/slimv') -- <leader>c for SBCL REPL (emacs SLIME for vim)
 add('ludovicchabant/vim-gutentags') -- essential automated ctags mgr (replaces vim-easytags)
 add('mhinz/vim-startify') -- start screen + sane sessions (replaces vim-sessionist)
-add('vim-vdebug/vdebug') -- modern vim debugger
