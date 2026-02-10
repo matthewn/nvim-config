@@ -45,9 +45,11 @@ local function my_highlights()
     hl(0, 'IncSearch', { fg = '#ffffff', bg = 'blue' })
   end
 
-  -- reinitialize the indent guides after all other color changes
-  package.loaded['plugins.ibl-init'] = nil
-  require('plugins.ibl-init')
+  -- refresh indent-blankline
+  local ok, ibl_init = pcall(require, 'plugins.ibl-init')
+  if ok then
+    ibl_init.setup_ibl()
+  end
 end
 
 -- set up autocommands
