@@ -22,6 +22,7 @@ add('LunarVim/bigfile.nvim') -- handle large files more gracefully
 add('MagicDuck/grug-far.nvim') -- project-wide find and replace at :GrugFar
 add('NeogitOrg/neogit') -- git git git
 add('chrishrb/gx.nvim') -- improved 'gx' command (includes opening github links from this file!)
+add('folke/zen-mode.nvim') -- distraction-free environment (replaces goyo/vimroom)
 add('folke/todo-comments.nvim') -- highlight TODO and such
 add('j-hui/fidget.nvim') -- toast-like LSP messages & notifications
 add('lewis6991/gitsigns.nvim') -- git in the gutter
@@ -74,7 +75,6 @@ add('tweekmonster/django-plus.vim') -- django niceties
 -- vimscript plugins, have config in globals.lua or elsewhere
 add('Valloric/MatchTagAlways') -- html tag highlighting
 add('andymass/vim-matchup') -- replaces vim's matchit plugin
-add('junegunn/goyo.vim') -- replaces vimroom
 add('junegunn/vim-easy-align') -- visual mode: press enter to align stuff
 add('kovisoft/slimv') -- <leader>c for SBCL REPL (emacs SLIME for vim)
 add('ludovicchabant/vim-gutentags') -- essential automated ctags mgr (replaces vim-easytags)
