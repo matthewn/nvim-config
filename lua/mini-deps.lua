@@ -41,11 +41,11 @@ add({
   hooks = { post_checkout = function() vim.cmd('TSUpdate') end }
 }) -- drives neovim 0.11 treesitter configs
 add('nvim-treesitter/nvim-treesitter-context') -- show top of long functions
+add('rachartier/tiny-inline-diagnostic.nvim') -- LSP diagnostics (replaces e-kaput)
 add('romgrk/barbar.nvim') -- bufferline replacement (w/ rearrangeable tabs!)
 add('sindrets/diffview.nvim') -- used with neogit
 add('stevearc/aerial.nvim') -- code outline window (replaces Vista.vim)
 add('stevearc/conform.nvim') -- provides :Format (for black and such)
-add({ source = 'volvofixthis/e-kaput.nvim', checkout = 'fixes' }) -- floating LSP diagnostics
 add('wsdjeg/rooter.nvim') -- auto-cd to project root
 add('y3owk1n/time-machine.nvim') -- undotree replacement
 add('zaldih/themery.nvim') -- colorscheme browser at :Themery
