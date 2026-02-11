@@ -10,13 +10,21 @@ completion.setup({
   lsp_completion = {
     enabled = function()
       local ft = vim.bo.filetype
-      -- disable for html and htmldjango
-      if ft == 'html' or ft == 'htmldjango' then
+      if ft == 'html' or ft == 'htmldjango' or ft == 'markdown' then
         return false
       end
       return true
     end,
   },
+  fallback_action = function()
+    local ft = vim.bo.filetype
+    if ft == 'markdown' then
+      -- do nothing for markdown fallback
+      return nil
+    end
+    -- default behavior for everything else (usually <C-n>)
+    return vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes('<C-n>', true, false, true), 'n', true)
+  end,
 })
 
 -- smart tab functions (for keymaps below)
@@ -43,6 +51,7 @@ end
 vim.keymap.set('i', '<tab>', smart_tab, { expr = true, desc = 'Smart tab completion' })
 vim.keymap.set('i', '<s-tab>', smart_s_tab, { expr = true, desc = 'Smart shift-tab completion' })
 vim.keymap.set('i', '<cr>', 'pumvisible() ? "\\<C-y>" : "\\<CR>"', { expr = true, desc = 'Smart enter (accept completion)' })
+
 
 -- mini.trailspace: show / remove trailing whitespace
 require('mini.trailspace').setup()

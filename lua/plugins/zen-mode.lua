@@ -17,14 +17,29 @@ end
 
 zen.setup({
   window = {
+    backdrop = 1, -- no shading the text area
     width = 80,
     height = 0.96,
     options = { spell = true, linebreak = true },
   },
   plugins = {
     options = { enabled = true, laststatus = 3 },
-    neovide = { enabled = true, scale = 1.2, fullscreen = true },
+    neovide = {
+      enabled = true,
+      disable_animations = {
+        -- retain existing settings
+        -- (empty table is expected to work for this but does not -- ???)
+        neovide_animation_length = vim.g.neovide_cursor_animation_length,
+        neovide_cursor_animate_command_line = vim.g.neovide_cursor_animate_command_line,
+        neovide_scroll_animation_length = vim.g.neovide_scroll_animation_length,
+        neovide_position_animation_length = vim.g.neovide_position_animation_length,
+        neovide_cursor_animation_length = vim.g.neovide_cursor_animation_length,
+        neovide_cursor_vfx_mode = vim.g.neovide_cursor_vfx_mode,
+      },
+      scale = 1.2,
+    },
   },
+  -- ****** ON_OPEN ******
   on_open = function()
     _G.zen_is_active = true
 
@@ -32,6 +47,7 @@ zen.setup({
     vim.api.nvim_set_hl(0, 'StatusLine', { fg = '#808080', bg = 'none' })
     vim.api.nvim_set_hl(0, 'StatusLineNC', { fg = '#808080', bg = 'none' })
     vim.opt.statusline = ' %{v:lua.zen_word_count()} %= %p%% '
+    vim.g.neovide_fullscreen = true
 
     vim.cmd('hi! link NonText Normal')
     vim.cmd('hi! link SpecialKey Normal')
@@ -42,11 +58,13 @@ zen.setup({
         or ' '
     end, { buffer = true, desc = 'Toggle zen statusline' })
   end,
+  -- ****** ON_CLOSE ******
   on_close = function()
     _G.zen_is_active = false
     vim.b.ministatusline_disable = false
     if _G.MiniStatusline then _G.MiniStatusline.setup() end
     if vim.g.colors_name then vim.cmd('colorscheme ' .. vim.g.colors_name) end
+    vim.g.neovide_fullscreen = false
   end,
 })
 
@@ -62,3 +80,5 @@ vim.api.nvim_create_autocmd('BufReadPost', {
     end
   end,
 })
+
+vim.keymap.set('n', '<leader>z', '<cmd>ZenMode<cr>', { silent = true, desc = 'Toggle zen-mode' })
