@@ -11,6 +11,7 @@ vim.g.startify_session_before_save = {
 }
 
 -- set up barbar-aware buffer next/previous keymaps
+-- (some of these replace mappings from vim-unimpaired)
 if vim.g.neovide then
   vim.keymap.set({ 'n', 'i' }, '<c-tab>', '<cmd>BufferNext<cr>', { silent = true, desc = 'Next buffer' })
   vim.keymap.set({ 'n', 'i' }, '<c-s-tab>', '<cmd>BufferPrevious<cr>', { silent = true, desc = 'Previous buffer' })

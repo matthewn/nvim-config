@@ -2,7 +2,7 @@ local autocmd = vim.api.nvim_create_autocmd
 local augroup = vim.api.nvim_create_augroup('init', { clear = true })
 
 
-vim.api.nvim_create_autocmd('FileType', {
+autocmd('FileType', {
   desc = 'Enable treesitter on some filetypes',
   pattern = {'python', 'css', 'javascript', 'typescript', 'html', 'htmldjango', 'json'},
   group = augroup,
