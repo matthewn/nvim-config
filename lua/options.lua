@@ -1,6 +1,6 @@
 local opt = vim.opt
 
-opt.backspace = { 'indent', 'eol', 'start' } -- allow b/s over everything in insert mode
+opt.autoread = false -- do not reload file if it changes outside of neovim
 opt.breakindent = true -- smart/indented line wrapping
 opt.confirm = true -- confirm dialog instead of fail
 opt.dict:append(vim.fn.stdpath('config') .. '/dictionaries/wordlist.dict')
