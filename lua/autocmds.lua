@@ -6,8 +6,14 @@ autocmd('FileType', {
   desc = 'Enable treesitter on some filetypes',
   pattern = {'python', 'css', 'javascript', 'typescript', 'html', 'htmldjango', 'json'},
   group = augroup,
-  callback = function()
-    vim.treesitter.start()
+  callback = function(args)
+    local lang = vim.treesitter.language.get_lang(args.match) or args.match
+    local has_parser = pcall(vim.treesitter.get_parser, args.buf, lang)
+    if has_parser then
+      vim.treesitter.start(args.buf, lang)
+    else
+      vim.notify(string.format("Treesitter parser [%s] missing. Run :TSInstall %s", lang, lang), vim.log.levels.WARN)
+    end
   end,
 })
 
