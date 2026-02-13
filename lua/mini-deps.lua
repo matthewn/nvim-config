@@ -53,6 +53,7 @@ add('zaldih/themery.nvim') -- colorscheme browser at :Themery
 -- colorschemes
 add('oahlen/iceberg.nvim')
 add('oxfist/night-owl.nvim')
+add('slugbyte/lackluster.nvim')
 add({ source = 'https://gitlab.com/shmerl/neogotham.git' })
 
 -- vimscript plugins, no config
