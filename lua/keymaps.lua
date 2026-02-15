@@ -115,7 +115,7 @@ vim.keymap.set('n', 'gs', function()
     vim.cmd('quit')
   else
     if package.loaded['barbar'] then
-      vim.cmd('BufferClose') -- delete normal buffer, barbar-style
+      vim.cmd('confirm BufferClose') -- delete normal buffer, barbar-style
     else
       vim.cmd('bd') -- delete normal buffer
     end
