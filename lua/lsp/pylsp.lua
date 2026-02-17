@@ -25,11 +25,12 @@ vim.api.nvim_create_autocmd('User', {
   group = augroup,
   pattern = 'DirenvLoaded',
   callback = function()
-    -- small delay to ensure environment is fully loaded
+    if vim.bo.filetype ~= 'python' then return end
+
     vim.defer_fn(function()
-      -- only restart if we have LSP clients attached
-      if next(vim.lsp.get_clients()) then
-        vim.cmd("LspRestart")
+      local clients = vim.lsp.get_clients({ name = 'pylsp', bufnr = 0 })
+      if #clients > 0 then
+        vim.cmd('LspRestart pylsp')
       end
     end, 100)
   end,
