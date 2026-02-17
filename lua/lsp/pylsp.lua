@@ -4,11 +4,17 @@ vim.lsp.config('pylsp', {
     pylsp = {
       configurationSources = { 'flake8' }, -- use ~/.config/flake8
       plugins = {
-        flake8 = { enabled = true },
+        ruff = {
+          -- ensure fallback/global config can always be found
+          config = vim.fn.expand('~/.config/ruff/pyproject.toml'),
+          enabled = true,
+          reportCode = true,
+        },
         jedi_completion = {
           enabled = true,
           eager = true,
         },
+        flake8 = { enabled = false },
         mccabe = { enabled = false },
         pycodestyle = { enabled = false },
         pyflakes = { enabled = false },
