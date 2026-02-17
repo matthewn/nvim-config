@@ -8,6 +8,7 @@ require('keymaps')
 require('neovide')
 
 -- LSP
+require('lsp.djls')
 require('lsp.lua_ls')
 require('lsp.pylsp')
 require('lsp.stylelint_lsp')
