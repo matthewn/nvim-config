@@ -21,6 +21,7 @@ local add = MiniDeps.add
 add('LunarVim/bigfile.nvim') -- handle large files more gracefully
 add('MagicDuck/grug-far.nvim') -- project-wide find and replace at :GrugFar
 add('NeogitOrg/neogit') -- git git git
+add('Wansmer/treesj') -- treesitter-driven :TSJToggle at <leader>j
 add('chrishrb/gx.nvim') -- improved 'gx' command (includes opening github links from this file!)
 add('folke/zen-mode.nvim') -- distraction-free environment (replaces goyo/vimroom)
 add('folke/todo-comments.nvim') -- highlight TODO and such
