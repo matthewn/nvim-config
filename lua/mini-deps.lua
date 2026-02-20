@@ -36,6 +36,13 @@ add('neovim/nvim-lspconfig') -- LSP utilities & example configurations
 add('numtostr/BufOnly.nvim') -- close all buffers but current
 add('nvim-lua/plenary.nvim') -- used by telescope
 add('nvim-telescope/telescope.nvim') -- fuzzy finder (replaces fzf.vim)
+add({
+  source = 'nvim-telescope/telescope-fzf-native.nvim',
+  hooks = {
+    post_install = function(args) vim.fn.system({'make', '-C', args.path}) end,
+    post_checkout = function(args) vim.fn.system({'make', '-C', args.path}) end,
+  },
+})
 add('nvim-tree/nvim-web-devicons') -- used by barbar, mini.icons, etc.
 add({
   source = 'nvim-treesitter/nvim-treesitter',

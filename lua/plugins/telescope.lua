@@ -48,6 +48,7 @@ require('telescope').setup{
     },
   }
 }
+require('telescope').load_extension('fzf')
 
 local keymap = vim.keymap.set
 keymap('n', '<leader>f', '<cmd>Telescope git_files<cr>', { desc = 'Find git files' })
