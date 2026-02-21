@@ -20,7 +20,10 @@ local add = MiniDeps.add
 -- nvim plugins
 add('LunarVim/bigfile.nvim') -- handle large files more gracefully
 add('MagicDuck/grug-far.nvim') -- project-wide find and replace at :GrugFar
-add('NeogitOrg/neogit') -- git git git
+add({ -- git git git!
+  source = 'NeogitOrg/neogit',
+  depends = { 'sindrets/diffview.nvim' },
+})
 add('Wansmer/treesj') -- treesitter-driven :TSJToggle at <leader>j
 add('chrishrb/gx.nvim') -- improved 'gx' command (includes opening github links from this file!)
 add('folke/zen-mode.nvim') -- distraction-free environment (replaces goyo/vimroom)
@@ -34,24 +37,27 @@ add('mfussenegger/nvim-dap-python') -- python debugger
 add('mfussenegger/nvim-lint') -- integrates non-LSP linters (makes eslint work)
 add('neovim/nvim-lspconfig') -- LSP utilities & example configurations
 add('numtostr/BufOnly.nvim') -- close all buffers but current
-add('nvim-lua/plenary.nvim') -- used by telescope
-add('nvim-telescope/telescope.nvim') -- fuzzy finder (replaces fzf.vim)
-add({
+add({ -- fuzzy finder (replaces fzf.vim)
+  source = 'nvim-telescope/telescope.nvim',
+  depends = { 'nvim-lua/plenary.nvim' },
+})
+add({ -- compiled helper, massively increases telescope performance
   source = 'nvim-telescope/telescope-fzf-native.nvim',
   hooks = {
     post_install = function(args) vim.fn.system({'make', '-C', args.path}) end,
     post_checkout = function(args) vim.fn.system({'make', '-C', args.path}) end,
   },
 })
-add('nvim-tree/nvim-web-devicons') -- used by barbar, mini.icons, etc.
-add({
+add({ -- drives neovim 0.11 treesitter configs
   source = 'nvim-treesitter/nvim-treesitter',
   hooks = { post_checkout = function() vim.cmd('TSUpdate') end }
-}) -- drives neovim 0.11 treesitter configs
+})
 add('nvim-treesitter/nvim-treesitter-context') -- show top of long functions
 add('rachartier/tiny-inline-diagnostic.nvim') -- LSP diagnostics (replaces e-kaput)
-add('romgrk/barbar.nvim') -- bufferline replacement (w/ rearrangeable tabs!)
-add('sindrets/diffview.nvim') -- used with neogit
+add({ -- bufferline replacement (w/ rearrangeable tabs!)
+  source = 'romgrk/barbar.nvim',
+  depends = { 'nvim-tree/nvim-web-devicons' },
+})
 add('stevearc/aerial.nvim') -- code outline window (replaces Vista.vim)
 add('stevearc/conform.nvim') -- provides :Format (for black and such)
 add('wsdjeg/rooter.nvim') -- auto-cd to project root
