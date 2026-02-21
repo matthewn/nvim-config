@@ -76,6 +76,7 @@ local function set_indent(width)
   vim.opt.tabstop = width
   vim.opt.softtabstop = width
   vim.opt.shiftwidth = width
+  vim.cmd('set tabstop?')
 end
 keymap('n', '<leader>#2', function() set_indent(2) end, { desc = 'Set tab width to 2' })
 keymap('n', '<leader>#4', function() set_indent(4) end, { desc = 'Set tab width to 4' })
