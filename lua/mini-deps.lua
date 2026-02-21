@@ -66,7 +66,6 @@ add({ source = 'https://gitlab.com/shmerl/neogotham.git' })
 
 -- vimscript plugins, no config
 add('AndrewRadev/sideways.vim') -- move arguments right/left
-add('Vimjas/vim-python-pep8-indent') -- fix python indenting
 add('chrisbra/Colorizer') -- show hex colors, etc. with :ColorToggle
 add('direnv/direnv.vim') -- direnv integration
 add('gioele/vim-autoswap') -- essential: never ever bug me about swap files
@@ -88,5 +87,4 @@ add('Valloric/MatchTagAlways') -- html tag highlighting
 add('andymass/vim-matchup') -- replaces vim's matchit plugin
 add('junegunn/vim-easy-align') -- visual mode: press enter to align stuff
 add('kovisoft/slimv') -- <leader>c for SBCL REPL (emacs SLIME for vim)
-add('ludovicchabant/vim-gutentags') -- essential automated ctags mgr (replaces vim-easytags)
 add('mhinz/vim-startify') -- start screen + sane sessions (replaces vim-sessionist)
