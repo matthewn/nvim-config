@@ -28,6 +28,7 @@ add('Wansmer/treesj') -- treesitter-driven :TSJToggle at <leader>j
 add('chrishrb/gx.nvim') -- improved 'gx' command (includes opening github links from this file!)
 add('folke/zen-mode.nvim') -- distraction-free environment (replaces goyo/vimroom)
 add('folke/todo-comments.nvim') -- highlight TODO and such
+add('gbprod/stay-in-place.nvim') -- improve >> and <<
 add('j-hui/fidget.nvim') -- toast-like LSP messages & notifications
 add('lewis6991/gitsigns.nvim') -- git in the gutter
 add('lukas-reineke/indent-blankline.nvim') -- replaces vim-indent-guides

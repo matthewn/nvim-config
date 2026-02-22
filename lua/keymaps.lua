@@ -21,10 +21,6 @@ keymap('', '<C-q>', '<C-v>', { desc = 'Visual block mode (remapped from Ctrl-V)'
 -- avoid useless Ex mode, reassign Q to reflow/format
 keymap('', 'Q', 'gq', { desc = 'Reflow/format text' })
 
--- reselect visual block after indent/outdent
-keymap('v', '<', '<gv', { desc = 'Indent left and reselect' })
-keymap('v', '>', '>gv', { desc = 'Indent right and reselect' })
-
 -- do not move cursor after yanking in visual mode
 keymap('v', 'y', 'ygv<Esc>', { desc = 'Yank without moving cursor' })
 

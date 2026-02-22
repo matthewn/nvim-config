@@ -37,6 +37,7 @@ require('neogotham').setup()
 require('night-owl').setup({ italics = false })
 require('nvim-surround').setup()
 require('rooter').setup()
+require('stay-in-place').setup()
 require('time-machine').setup({})
 
 -- startup
