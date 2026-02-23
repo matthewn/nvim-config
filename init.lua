@@ -31,7 +31,7 @@ require('plugins.themery')
 require('plugins.treesj')
 require('plugins.zen-mode')
 require('bigfile').setup()
-require('fidget').setup()
+require('fidget').setup(); vim.notify = require('fidget').notify
 require('neogit').setup({ graph_style = 'unicode' })
 require('neogotham').setup()
 require('night-owl').setup({ italics = false })
