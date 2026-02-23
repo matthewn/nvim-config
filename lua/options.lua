@@ -6,7 +6,6 @@ opt.confirm = true -- replace certain failed operations with confirmation msgs
 opt.dict:append(vim.fn.stdpath('config') .. '/dictionaries/wordlist.dict')
 opt.foldenable = false
 opt.foldmethod = 'indent'
-opt.formatoptions:append('j') -- make J command grok multiline code comments
 opt.iskeyword:remove('_') -- make _ act as a word boundary
 opt.mouse = 'a'
 opt.nrformats = '' -- force decimal-based arithmetic on ctrl-a/x
