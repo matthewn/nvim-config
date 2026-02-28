@@ -30,6 +30,11 @@ local function my_highlights()
   -- colorscheme-specific tweaks
   local colorscheme = vim.g.colors_name
 
+  -- tweaks for iceberg
+  if colorscheme == 'iceberg' then
+    hl(0, 'Normal', { fg = '#c7c9d1', bg = '#0c1014' })
+  end
+
   -- tweaks for neogotham
   if colorscheme == 'neogotham' then
     hl(0, 'MatchParen', { fg = '#ffffff', bg = '#0a3749' })
