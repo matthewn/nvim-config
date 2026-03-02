@@ -1,3 +1,5 @@
+---@diagnostic disable: undefined-field
+
 require('mini.icons').setup()
 require('mini.splitjoin').setup()
 require('mini.statusline').setup({ use_icons = vim.g.neovide ~= nil })
@@ -82,25 +84,17 @@ require('mini.files').setup({
 
 -- helper: find project root
 local function get_project_root()
-  local cwd = vim.fn.getcwd()
-
-  -- use LSP root if available
-  local clients = vim.lsp.get_clients({ bufnr = 0 })
-  if next(clients) ~= nil then
-    local lsp_root = clients[1].config.root_dir
-    if lsp_root ~= nil then
-      return lsp_root
-    end
+  local client = vim.lsp.get_clients({ bufnr = 0 })[1]
+  if client and client.config.root_dir then
+    return client.config.root_dir
   end
 
-  -- otherwise, search upwards for git repo
-  local git_root = vim.fn.systemlist('git -C ' .. vim.fn.fnameescape(vim.fn.expand('%:p:h')) .. ' rev-parse --show-toplevel')[1]
-  if vim.v.shell_error == 0 then
-    return git_root
+  local root = vim.fs.root(0, { '.git', 'Makefile', 'package.json', 'pyproject.toml' })
+  if root then
+    return root
   end
 
-  -- fallback: current working directory
-  return cwd
+  return vim.uv.cwd() -- fallback
 end
 
 -- helper: open mini.files at a given path
