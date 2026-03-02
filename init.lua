@@ -2,6 +2,7 @@
 require('options')
 require('globals')
 require('colors')
+require('colortweak')
 require('autocmds')
 require('commands')
 require('keymaps')
