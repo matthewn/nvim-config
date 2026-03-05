@@ -18,7 +18,6 @@ require('mini.deps').setup({ path = { package = path_package } })
 local add = MiniDeps.add
 
 -- nvim plugins
-add('LunarVim/bigfile.nvim') -- handle large files more gracefully
 add('MagicDuck/grug-far.nvim') -- project-wide find and replace at :GrugFar
 add({ -- git git git!
   source = 'NeogitOrg/neogit',
@@ -55,6 +54,7 @@ add({ -- drives neovim 0.11 treesitter configs
   hooks = { post_checkout = function() vim.cmd('TSUpdate') end }
 })
 add('nvim-treesitter/nvim-treesitter-context') -- show top of long functions
+add('pteroctopus/faster.nvim') -- handle large files more gracefully (replaces bigfile.nvim)
 add('rachartier/tiny-inline-diagnostic.nvim') -- LSP diagnostics (replaces e-kaput)
 add({ -- bufferline replacement (w/ rearrangeable tabs!)
   source = 'romgrk/barbar.nvim',
