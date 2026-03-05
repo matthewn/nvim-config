@@ -78,12 +78,10 @@ add('direnv/direnv.vim') -- direnv integration
 add('gioele/vim-autoswap') -- essential: never ever bug me about swap files
 add('gorkunov/smartpairs.vim') -- 'vv' for quick visual selection
 add('justinmk/vim-gtfo') -- got/T for a term; gof/F for a filemanager
-add('keith/investigate.vim') -- gK for vimhelp on word at cursor
 add('milkypostman/vim-togglelist') -- <leader>q toggles quickfix; <leader>l toggles location
 add('rbong/vim-buffest')  -- register/macro editing
 add('rhysd/clever-f.vim') -- improve f and F seches; no need for ; or ,
 add('thiderman/vim-reinhardt') -- for django-aware 'gf'
-add('tmhedberg/SimpylFold') -- improved folding for python
 add('tpope/vim-characterize') -- power-up for 'ga'
 add('tpope/vim-ragtag') -- useful html-related mappings
 add('tpope/vim-unimpaired') -- handy mappings
