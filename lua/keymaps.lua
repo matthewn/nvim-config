@@ -140,5 +140,5 @@ keymap('n', '<leader><esc>', ':Startify<cr>', { desc = 'Open Startify' })
 keymap('n', '<leader>XX', ':SClose<cr>', { desc = 'Close session' })
 keymap('n', '<leader>SS', ':SSave!<cr>', { desc = 'Save session' })
 
--- timemachine (gundo replacement)
-keymap('n', '<leader>u', '<cmd>TimeMachineToggle<cr>', { desc = 'Toggle undo history' })
+-- atone (gundo replacement)
+keymap('n', '<leader>u', '<cmd>Atone toggle<cr>', { desc = 'Toggle Atone (undo history)' })

@@ -32,6 +32,7 @@ require('plugins.themery')
 require('plugins.treesj')
 require('plugins.zen-mode')
 require('bigfile').setup()
+require('atone').setup()
 require('fidget').setup()
 require('neogit').setup({ graph_style = 'unicode' })
 require('neogotham').setup()
@@ -39,7 +40,6 @@ require('night-owl').setup({ italics = false })
 require('nvim-surround').setup()
 require('rooter').setup()
 require('stay-in-place').setup()
-require('time-machine').setup({})
 
 -- startup
 if vim.fn.has('vim_starting') == 1 then

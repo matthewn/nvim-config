@@ -25,6 +25,7 @@ add({ -- git git git!
   depends = { 'sindrets/diffview.nvim' },
 })
 add('Wansmer/treesj') -- treesitter-driven :TSJToggle at <leader>j
+add('XXiaoA/atone.nvim') -- undotree replacement
 add('chrishrb/gx.nvim') -- improved 'gx' command (includes opening github links from this file!)
 add('folke/zen-mode.nvim') -- distraction-free environment (replaces goyo/vimroom)
 add('folke/todo-comments.nvim') -- highlight TODO and such
@@ -62,7 +63,6 @@ add({ -- bufferline replacement (w/ rearrangeable tabs!)
 add('stevearc/aerial.nvim') -- code outline window (replaces Vista.vim)
 add('stevearc/conform.nvim') -- provides :Format (for black and such)
 add('wsdjeg/rooter.nvim') -- auto-cd to project root
-add('y3owk1n/time-machine.nvim') -- undotree replacement
 add('zaldih/themery.nvim') -- colorscheme browser at :Themery
 
 -- colorschemes
