@@ -12,11 +12,17 @@ lint.linters.eslint.args = {
 }
 
 lint.linters_by_ft = {
+  css = { 'stylelint' },
+  scss = { 'stylelint' },
   javascript = { 'eslint' },
 }
 
 vim.api.nvim_create_autocmd(  { 'TextChanged', 'TextChangedI', 'BufReadPost', 'BufWritePost' }, {
-  pattern = { '*.js' }, -- only operate on js files for now
+  pattern = {
+    '*.css',
+    '*.scss',
+    '*.js',
+  },
   callback = function()
     -- try_lint without arguments runs the linters defined in `linters_by_ft`
     -- for the current filetype

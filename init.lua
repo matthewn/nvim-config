@@ -12,7 +12,6 @@ require('neovide')
 require('lsp.djls')
 require('lsp.lua_ls')
 require('lsp.python')
-require('lsp.stylelint_lsp')
 
 -- plugins
 require('mini-deps')
