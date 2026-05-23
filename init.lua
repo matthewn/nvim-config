@@ -14,7 +14,7 @@ require('lsp.lua_ls')
 require('lsp.python')
 
 -- plugins
-require('mini-deps')
+require('vimpack')
 require('plugins.aerial')
 require('plugins.barbar')
 require('plugins.conform')
