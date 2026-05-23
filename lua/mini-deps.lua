@@ -49,8 +49,9 @@ add({ -- compiled helper, massively increases telescope performance
     post_checkout = function(args) vim.fn.system({'make', '-C', args.path}) end,
   },
 })
-add({ -- drives neovim 0.11 treesitter configs
+add({ -- drives treesitter configs
   source = 'nvim-treesitter/nvim-treesitter',
+  checkout = 'master', -- branch for neovim 0.11
   hooks = { post_checkout = function() vim.cmd('TSUpdate') end }
 })
 add('nvim-treesitter/nvim-treesitter-context') -- show top of long functions
@@ -60,7 +61,10 @@ add({ -- bufferline replacement (w/ rearrangeable tabs!)
   source = 'romgrk/barbar.nvim',
   depends = { 'nvim-tree/nvim-web-devicons' },
 })
-add('stevearc/aerial.nvim') -- code outline window (replaces Vista.vim)
+add({ -- code outline window (replaces Vista.vim)
+  source = 'stevearc/aerial.nvim',
+  checkout = 'nvim-0.11', -- branch for neovim 0.11
+})
 add('stevearc/conform.nvim') -- provides :Format (for black and such)
 add('wsdjeg/rooter.nvim') -- auto-cd to project root
 add('zaldih/themery.nvim') -- colorscheme browser at :Themery
