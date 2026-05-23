@@ -38,10 +38,22 @@ vim.api.nvim_create_autocmd('User', {
       for _, server in ipairs(target_servers) do
         local clients = vim.lsp.get_clients({ name = server, bufnr = 0 })
         if #clients > 0 then
-          vim.cmd('LspRestart ' .. server)
+          -- Safely stop the active clients
+          for _, client in ipairs(clients) do
+            local config = client.config
+            vim.lsp.stop_client(client.id, true) -- true forces immediate shutdown
+            
+            -- Small delay to let the OS kill the process before restarting it
+            vim.defer_fn(function()
+              vim.lsp.start(config)
+            end, 50)
+          end
         else
-          -- if it wasn't started yet because of autostart = false
-          vim.cmd('LspStart ' .. server)
+          -- Fallback if server wasn't running yet
+          local status, lspconfig = pcall(require, 'lspconfig')
+          if status and lspconfig[server] then
+            lspconfig[server].launch()
+          end
         end
       end
     end, 100)
