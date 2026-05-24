@@ -24,32 +24,33 @@ vim.api.nvim_create_autocmd('PackChanged', {
 vim.pack.add({
   -- nvim plugins
   gh('MagicDuck/grug-far.nvim'),                  -- project-wide find and replace at :GrugFar
-  gh('sindrets/diffview.nvim'),                   -- (neogit dependency)
   gh('NeogitOrg/neogit'),                         -- git git git!
   gh('Wansmer/treesj'),                           -- treesitter-driven :TSJToggle at <leader>j
   gh('chrishrb/gx.nvim'),                         -- improved 'gx' command (includes opening github links from this file!)
-  gh('folke/zen-mode.nvim'),                      -- distraction-free environment (replaces goyo/vimroom)
   gh('folke/todo-comments.nvim'),                 -- highlight TODO and such
+  gh('folke/zen-mode.nvim'),                      -- distraction-free environment (replaces goyo/vimroom)
   gh('gbprod/stay-in-place.nvim'),                -- improve >> and <<
   gh('j-hui/fidget.nvim'),                        -- toast-like LSP messages & notifications
+  gh('kylechui/nvim-surround'),                   -- vim-surround replacement
   gh('lewis6991/gitsigns.nvim'),                  -- git in the gutter
   gh('lukas-reineke/indent-blankline.nvim'),      -- replaces vim-indent-guides
-  gh('kylechui/nvim-surround'),                   -- vim-surround replacement
   gh('mfussenegger/nvim-dap'),                    -- debug adapter protocol client (replaces vdebug)
   gh('mfussenegger/nvim-dap-python'),             -- python debugger
   gh('mfussenegger/nvim-lint'),                   -- integrates non-LSP linters (makes eslint work)
-  gh('nvim-mini/mini.nvim'),                      -- mini.* library (icons, files, completion, statusline, map, ...)
+  gh('mplusp/pack-manager.nvim'),                 -- niceties for vim.pack
   gh('neovim/nvim-lspconfig'),                    -- LSP utilities & example configurations
   gh('numtostr/BufOnly.nvim'),                    -- close all buffers but current
   gh('nvim-lua/plenary.nvim'),                    -- (telescope dependency)
-  gh('nvim-telescope/telescope.nvim'),            -- fuzzy finder (replaces fzf.vim)
+  gh('nvim-mini/mini.nvim'),                      -- mini.* library (icons, files, completion, statusline, map, ...)
   gh('nvim-telescope/telescope-fzf-native.nvim'), -- compiled helper, massively increases telescope performance (see PackChanged above)
+  gh('nvim-telescope/telescope.nvim'),            -- fuzzy finder (replaces fzf.vim)
+  gh('nvim-tree/nvim-web-devicons'),              -- (barbar dependency)
   gh('nvim-treesitter/nvim-treesitter'),          -- drives treesitter configs (see PackChanged above)
   gh('nvim-treesitter/nvim-treesitter-context'),  -- show top of long functions
   gh('pteroctopus/faster.nvim'),                  -- handle large files more gracefully (replaces bigfile.nvim)
   gh('rachartier/tiny-inline-diagnostic.nvim'),   -- LSP diagnostics (replaces e-kaput)
-  gh('nvim-tree/nvim-web-devicons'),              -- (barbar dependency)
   gh('romgrk/barbar.nvim'),                       -- bufferline replacement (w/ rearrangeable tabs!)
+  gh('sindrets/diffview.nvim'),                   -- (neogit dependency)
   gh('stevearc/aerial.nvim'),                     -- code outline window (replaces Vista.vim)
   gh('stevearc/conform.nvim'),                    -- provides :Format (for black and such)
   gh('wsdjeg/rooter.nvim'),                       -- auto-cd to project root
