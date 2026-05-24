@@ -140,5 +140,6 @@ keymap('n', '<leader><esc>', ':Startify<cr>', { desc = 'Open Startify' })
 keymap('n', '<leader>XX', ':SClose<cr>', { desc = 'Close session' })
 keymap('n', '<leader>SS', ':SSave!<cr>', { desc = 'Save session' })
 
--- atone (gundo replacement)
-keymap('n', '<leader>u', '<cmd>Atone toggle<cr>', { desc = 'Toggle Atone (undo history)' })
+-- neovim 0.12's built-in undotree
+vim.cmd('packadd nvim.undotree')
+keymap('n', '<leader>u', require('undotree').open, { desc = 'Toggle undotree' })

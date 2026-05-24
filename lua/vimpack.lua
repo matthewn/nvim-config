@@ -27,7 +27,6 @@ vim.pack.add({
   gh('sindrets/diffview.nvim'),                   -- (neogit dependency)
   gh('NeogitOrg/neogit'),                         -- git git git!
   gh('Wansmer/treesj'),                           -- treesitter-driven :TSJToggle at <leader>j
-  gh('XXiaoA/atone.nvim'),                        -- undotree replacement
   gh('chrishrb/gx.nvim'),                         -- improved 'gx' command (includes opening github links from this file!)
   gh('folke/zen-mode.nvim'),                      -- distraction-free environment (replaces goyo/vimroom)
   gh('folke/todo-comments.nvim'),                 -- highlight TODO and such

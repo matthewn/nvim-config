@@ -13,12 +13,8 @@
       "src": "https://github.com/Valloric/MatchTagAlways"
     },
     "aerial.nvim": {
-      "rev": "43dd88ad4024b1945906887521057c73d3b0d84e",
+      "rev": "b77c47c34e11ef9102a3f6dbd12f6b835b7c3af1",
       "src": "https://github.com/stevearc/aerial.nvim"
-    },
-    "atone.nvim": {
-      "rev": "2c9dbfe447a3c5857a03098b0336c84f3b5c837f",
-      "src": "https://github.com/XXiaoA/atone.nvim"
     },
     "barbar.nvim": {
       "rev": "a4bef5b4fc1f064f2f673172252028eae18191c9",
@@ -29,7 +25,7 @@
       "src": "https://github.com/rhysd/clever-f.vim"
     },
     "conform.nvim": {
-      "rev": "18aeab3d63d350dcf44d64c462cc489a3412af40",
+      "rev": "619363c30309d29ffa631e67c8183f2a72caa373",
       "src": "https://github.com/stevearc/conform.nvim"
     },
     "diffview.nvim": {
@@ -161,7 +157,7 @@
       "src": "https://github.com/zaldih/themery.nvim"
     },
     "tiny-inline-diagnostic.nvim": {
-      "rev": "147af4e49f51dd48f41972de26552872b8ba7b25",
+      "rev": "d9625e82c8e3d111c889dddc9b28c1efa0e3305b",
       "src": "https://github.com/rachartier/tiny-inline-diagnostic.nvim"
     },
     "todo-comments.nvim": {
