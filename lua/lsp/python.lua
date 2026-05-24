@@ -4,7 +4,6 @@ vim.lsp.config('pyright', {
     ['textDocument/publishDiagnostics'] = function() end,
   },
   settings = {
-    autostart = false, -- wait for direnv
     python = {
       analysis = {
         -- enable completions and indexing
@@ -13,12 +12,6 @@ vim.lsp.config('pyright', {
         useLibraryCodeForTypes = true,
       },
     },
-  },
-})
-
-vim.lsp.config('ruff', {
-  settings = {
-    autostart = false, -- wait for direnv
   },
 })
 
@@ -50,9 +43,9 @@ vim.api.nvim_create_autocmd('User', {
           end
         else
           -- Fallback if server wasn't running yet
-          local status, lspconfig = pcall(require, 'lspconfig')
-          if status and lspconfig[server] then
-            lspconfig[server].launch()
+          local config = vim.lsp.config[server]
+          if config then
+            vim.lsp.start(config)
           end
         end
       end
