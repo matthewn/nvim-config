@@ -1,7 +1,7 @@
 vim.lsp.config('pyright', {
   handlers = {
-    -- drop pyright's diagnostics entirely (we use ruff instead)
-    ['textDocument/publishDiagnostics'] = function() end,
+    -- drop pyright's diagnostics (we use ruff instead)
+    ['textDocument/diagnostic'] = function() end,
   },
   settings = {
     python = {
@@ -34,9 +34,8 @@ vim.api.nvim_create_autocmd('User', {
           -- Safely stop the active clients
           for _, client in ipairs(clients) do
             local config = client.config
-            vim.lsp.stop_client(client.id, true) -- true forces immediate shutdown
-            
-            -- Small delay to let the OS kill the process before restarting it
+            client:stop(true) -- true forces immediate shutdown
+            -- small delay to let the OS kill the process before restarting it
             vim.defer_fn(function()
               vim.lsp.start(config)
             end, 50)
