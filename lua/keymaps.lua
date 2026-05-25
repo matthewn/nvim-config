@@ -135,11 +135,6 @@ keymap('n', '<leader>G', ':Neogit<cr>', { desc = 'Open Neogit' })
 keymap('n', '<C-S-h>', ':SidewaysLeft<cr>', { desc = 'Move argument left' })
 keymap('n', '<C-S-l>', ':SidewaysRight<cr>', { desc = 'Move argument right' })
 
--- startify
-keymap('n', '<leader><esc>', ':Startify<cr>', { desc = 'Open Startify' })
-keymap('n', '<leader>XX', ':SClose<cr>', { desc = 'Close session' })
-keymap('n', '<leader>SS', ':SSave!<cr>', { desc = 'Save session' })
-
 -- neovim 0.12's built-in undotree
 vim.cmd('packadd nvim.undotree')
 keymap('n', '<leader>u', require('undotree').open, { desc = 'Toggle undotree' })

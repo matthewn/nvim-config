@@ -5,11 +5,6 @@ require('barbar').setup {
   icons = { button = false, filetype = { enabled = vim.g.neovide ~= nil } },
 }
 
--- barbar/startify integration (ensure barbar buffer order is saved)
-vim.g.startify_session_before_save = {
-  'doautocmd User SessionSavePre',
-}
-
 -- set up barbar-aware buffer next/previous keymaps
 -- (some of these replace mappings from vim-unimpaired)
 if vim.g.neovide then

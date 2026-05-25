@@ -18,7 +18,7 @@ function M.setup_ibl()
   end
 
   require('ibl').setup {
-    exclude = { filetypes = { 'startify' } },
+    exclude = { filetypes = { 'ministarter' } },
     indent = { highlight = highlight, char = '' },
     whitespace = {
       highlight = highlight,

@@ -75,7 +75,7 @@ vim.api.nvim_create_autocmd('BufReadPost', {
   pattern = pattern_list,
   callback = function()
     -- only trigger if we aren't already in zen and it's a valid file
-    if not _G.zen_is_active and vim.bo.filetype ~= 'startify' and vim.api.nvim_buf_get_name(0) ~= '' then
+    if not _G.zen_is_active and vim.bo.filetype ~= 'ministarter' and vim.api.nvim_buf_get_name(0) ~= '' then
       vim.schedule(zen.open)
     end
   end,

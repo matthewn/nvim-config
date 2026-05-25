@@ -83,5 +83,4 @@ vim.pack.add({
   gh('andymass/vim-matchup'),                     -- replaces vim's matchit plugin
   gh('junegunn/vim-easy-align'),                  -- visual mode: press enter to align stuff
   gh('kovisoft/slimv'),                           -- <leader>c for SBCL REPL (emacs SLIME for vim)
-  gh('mhinz/vim-startify'),                       -- start screen + sane sessions (replaces vim-sessionist)
 })

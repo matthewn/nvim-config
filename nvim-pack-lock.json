@@ -161,7 +161,7 @@
       "src": "https://github.com/zaldih/themery.nvim"
     },
     "tiny-inline-diagnostic.nvim": {
-      "rev": "d9625e82c8e3d111c889dddc9b28c1efa0e3305b",
+      "rev": "6bdbc9a2f5a846ff5fc55a998ff97c0e2968b7e5",
       "src": "https://github.com/rachartier/tiny-inline-diagnostic.nvim"
     },
     "todo-comments.nvim": {
