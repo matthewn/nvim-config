@@ -1,0 +1,11 @@
+require('mini.icons').setup()
+require('mini.splitjoin').setup()
+require('mini.statusline').setup({ use_icons = vim.g.neovide ~= nil })
+
+-- per-module config (sessions before starter: starter reads `_G.MiniSessions`)
+require('plugins.mini.completion')
+require('plugins.mini.files')
+require('plugins.mini.map')
+require('plugins.mini.sessions')
+require('plugins.mini.starter')
+require('plugins.mini.trailspace')

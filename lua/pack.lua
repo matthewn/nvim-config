@@ -1,5 +1,3 @@
----@diagnostic disable: undefined-field, undefined-global
-
 local gh = function(repo) return 'https://github.com/' .. repo end
 
 -- Hooks: emulate mini.deps `post_install`/`post_checkout` via `PackChanged`.

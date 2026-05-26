@@ -1,7 +1,7 @@
 ---@diagnostic disable: undefined-field
 
 -- mini.starter: start screen (replaces vim-startify)
--- NOTE: depends on mini.sessions being set up (see plugins/mini.lua) for `_G.MiniSessions`
+-- NOTE: depends on mini.sessions being set up (see plugins/mini/sessions.lua) for `_G.MiniSessions`
 local starter = require('mini.starter')
 local fortunes = require('fortunes')
 

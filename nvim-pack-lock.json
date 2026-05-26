@@ -13,7 +13,7 @@
       "src": "https://github.com/Valloric/MatchTagAlways"
     },
     "aerial.nvim": {
-      "rev": "b77c47c34e11ef9102a3f6dbd12f6b835b7c3af1",
+      "rev": "585db11015abccf673dc5bd6502714d5655554be",
       "src": "https://github.com/stevearc/aerial.nvim"
     },
     "barbar.nvim": {
@@ -81,7 +81,7 @@
       "src": "https://github.com/NeogitOrg/neogit"
     },
     "neogotham": {
-      "rev": "3f5775e8f5f82a00729b715934a51af66f75d6ae",
+      "rev": "2c8ce0df7cd56d984143666bfafc33c8855a3229",
       "src": "https://gitlab.com/shmerl/neogotham.git"
     },
     "night-owl.nvim": {
@@ -203,10 +203,6 @@
     "vim-reinhardt": {
       "rev": "3725eff8d5a2db95f425ef96242fcd3c68ee41f5",
       "src": "https://github.com/thiderman/vim-reinhardt"
-    },
-    "vim-startify": {
-      "rev": "4e089dffdad46f3f5593f34362d530e8fe823dcf",
-      "src": "https://github.com/mhinz/vim-startify"
     },
     "vim-togglelist": {
       "rev": "48f0d30292efdf20edc883e61b121e6123e03df7",
