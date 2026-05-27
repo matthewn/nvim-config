@@ -200,8 +200,7 @@ vim.api.nvim_create_autocmd('User', {
   end,
 })
 
--- Layout hook: drop the (top) 'Builtin actions' section header, and add a blank
--- line after each remaining section header.
+-- Layout hook: drop the (top) 'Builtin actions' section header.
 local function tweak_layout(content)
   local out = {}
   for _, line in ipairs(content) do
@@ -210,9 +209,6 @@ local function tweak_layout(content)
       -- builtins sit at the top with no header: drop this line
     else
       out[#out + 1] = line
-      if is_section then
-        out[#out + 1] = { { string = '', type = 'empty', hl = nil } }
-      end
     end
   end
   return out
