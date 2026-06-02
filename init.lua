@@ -36,7 +36,7 @@ require('neogit').setup({ graph_style = 'unicode' })
 require('neogotham').setup()
 require('night-owl').setup({ italics = false })
 require('nvim-surround').setup()
-require('rooter').setup()
+require('rooter').setup({ command = 'cd' })
 require('stay-in-place').setup()
 
 -- startup
