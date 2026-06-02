@@ -82,3 +82,28 @@ vim.pack.add({
   gh('junegunn/vim-easy-align'),                  -- visual mode: press enter to align stuff
   gh('kovisoft/slimv'),                           -- <leader>c for SBCL REPL (emacs SLIME for vim)
 })
+
+
+-- user command for removing unused plugins
+vim.api.nvim_create_user_command('PackClean', function()
+  local inactive_plugins = {}
+
+  for _, plugin in ipairs(vim.pack.get()) do
+    if not plugin.active then
+      table.insert(inactive_plugins, plugin.spec.name)
+    end
+  end
+
+  if #inactive_plugins == 0 then
+    print('✓ All on-disk plugins match your configuration.')
+    return
+  end
+
+  local prompt = 'Delete these unused plugins?\n- ' .. table.concat(inactive_plugins, '\n- ')
+  local choice = vim.fn.confirm(prompt, '&Yes\n&No', 2)
+
+  if choice == 1 then
+    vim.pack.del(inactive_plugins)
+    print('Deleted ' .. #inactive_plugins .. ' unlisted plugins.')
+  end
+end, {})
