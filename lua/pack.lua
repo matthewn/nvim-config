@@ -21,6 +21,7 @@ vim.api.nvim_create_autocmd('PackChanged', {
 
 vim.pack.add({
   -- nvim plugins
+  gh('JPierro0513/pack-wrap.nvim'),               -- niceties for vim.pack
   gh('MagicDuck/grug-far.nvim'),                  -- project-wide find and replace at :GrugFar
   gh('NeogitOrg/neogit'),                         -- git git git!
   gh('Wansmer/treesj'),                           -- treesitter-driven :TSJToggle at <leader>j
@@ -35,7 +36,6 @@ vim.pack.add({
   gh('mfussenegger/nvim-dap'),                    -- debug adapter protocol client (replaces vdebug)
   gh('mfussenegger/nvim-dap-python'),             -- python debugger
   gh('mfussenegger/nvim-lint'),                   -- integrates non-LSP linters (makes eslint work)
-  gh('mplusp/pack-manager.nvim'),                 -- niceties for vim.pack
   gh('neovim/nvim-lspconfig'),                    -- LSP utilities & example configurations
   gh('numtostr/BufOnly.nvim'),                    -- close all buffers but current
   gh('nvim-lua/plenary.nvim'),                    -- (telescope dependency)

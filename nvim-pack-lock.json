@@ -73,7 +73,7 @@
       "src": "https://github.com/slugbyte/lackluster.nvim"
     },
     "mini.nvim": {
-      "rev": "44657837c7338e52727facc85c1d95bec1f6bd7c",
+      "rev": "232ceeb14f7f7e849056309b85cb2fed712db46f",
       "src": "https://github.com/nvim-mini/mini.nvim"
     },
     "neogit": {
@@ -81,7 +81,7 @@
       "src": "https://github.com/NeogitOrg/neogit"
     },
     "neogotham": {
-      "rev": "2c8ce0df7cd56d984143666bfafc33c8855a3229",
+      "rev": "d60ea0e68d335db5fd823ee72ccc7eac23a1a991",
       "src": "https://gitlab.com/shmerl/neogotham.git"
     },
     "night-owl.nvim": {
@@ -101,7 +101,7 @@
       "src": "https://github.com/mfussenegger/nvim-lint"
     },
     "nvim-lspconfig": {
-      "rev": "6f76a3eeadc2ee235d74cd7d5319e95a261084af",
+      "rev": "9573948c38bfabeec353ae7dd7d3ffec4c506a6b",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
     "nvim-surround": {
@@ -120,9 +120,9 @@
       "rev": "dfbfaa967a6f7ec50789bead7ef87e336c1fa63c",
       "src": "https://github.com/nvim-tree/nvim-web-devicons"
     },
-    "pack-manager.nvim": {
-      "rev": "e947437ab03c2e20d7eb4e27d1a5f043a9ab1d72",
-      "src": "https://github.com/mplusp/pack-manager.nvim"
+    "pack-wrap.nvim": {
+      "rev": "c1751c4100fb3c83a8d9e576aa9b4d1813ba4181",
+      "src": "https://github.com/JPierro0513/pack-wrap.nvim"
     },
     "plenary.nvim": {
       "rev": "74b06c6c75e4eeb3108ec01852001636d85a932b",
@@ -161,7 +161,7 @@
       "src": "https://github.com/zaldih/themery.nvim"
     },
     "tiny-inline-diagnostic.nvim": {
-      "rev": "6bdbc9a2f5a846ff5fc55a998ff97c0e2968b7e5",
+      "rev": "680762989e8b05a72e90769959d0fb9a557e6917",
       "src": "https://github.com/rachartier/tiny-inline-diagnostic.nvim"
     },
     "todo-comments.nvim": {
@@ -169,7 +169,7 @@
       "src": "https://github.com/folke/todo-comments.nvim"
     },
     "treesj": {
-      "rev": "5fa4e7ba3517f8fe743bb4488f9e9c7ce83330fc",
+      "rev": "79aedb401bbdc7e4202f7881eab5f6feb2105b0a",
       "src": "https://github.com/Wansmer/treesj"
     },
     "vim-autoswap": {
