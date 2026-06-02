@@ -3,7 +3,7 @@
 -- mini.starter: start screen (replaces vim-startify)
 -- NOTE: depends on mini.sessions being set up (see plugins/mini/sessions.lua) for `_G.MiniSessions`
 local starter = require('mini.starter')
-local fortunes = require('fortunes')
+local fortunes = require('plugins.mini.fortunes')
 
 -- sessions section: 'init' session pinned first, rest alphabetical
 local function sessions_section()
