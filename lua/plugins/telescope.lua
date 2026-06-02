@@ -9,6 +9,9 @@ require('telescope').setup{
     },
   },
   pickers = {
+    colorscheme = {
+      enable_preview = true,
+    },
     -- make find_files include files ignored by git
     find_files = {
       no_ignore = true,

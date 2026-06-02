@@ -52,7 +52,6 @@ vim.pack.add({
   gh('stevearc/aerial.nvim'),                     -- code outline window (replaces Vista.vim)
   gh('stevearc/conform.nvim'),                    -- provides :Format (for black and such)
   gh('wsdjeg/rooter.nvim'),                       -- auto-cd to project root
-  gh('zaldih/themery.nvim'),                      -- colorscheme browser at :Themery
 
   -- colorschemes
   gh('oahlen/iceberg.nvim'),
