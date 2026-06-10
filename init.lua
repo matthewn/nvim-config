@@ -46,11 +46,4 @@ if vim.fn.has('vim_starting') == 1 then
     vim.cmd.colorscheme('darkblue')
   end
   vim.o.background = 'dark'
-
-  -- neovide-only
-  if vim.g.neovide then
-    vim.opt.lines = 46
-    vim.opt.columns = 90
-    vim.opt.guifont = 'Ubuntu Mono:h16'
-  end
 end

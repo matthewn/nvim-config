@@ -4,6 +4,7 @@ if vim.g.neovide then
   vim.g.neovide_cursor_trail_size = 0.5
   vim.g.neovide_scroll_animation_length = 0.05
   vim.opt.helpheight = 32
+  vim.opt.guifont = 'Ubuntu Mono:h16'
 
   vim.api.nvim_create_user_command('Bigger', function()
     vim.g.neovide_scale_factor = vim.g.neovide_scale_factor * 1.1
