@@ -18,7 +18,6 @@ opt.undofile = true
 opt.undodir = vim.fn.stdpath('data') .. '/undo'
 opt.updatetime = 300  -- 300ms delay for CursorHold
 opt.wildmenu = true -- waaaaay better tab completion
-opt.wildmode = { 'list', 'longest', 'full' }
 opt.wildignore:append { '*/.git/*', '*/tmp/*', '*.so', '*.swp', '*.zip' }
 opt.wildignorecase = true
 
