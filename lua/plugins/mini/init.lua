@@ -1,5 +1,5 @@
 require('mini.icons').setup()
-require('mini.splitjoin').setup()
+require('mini.splitjoin').setup() -- (lives at gS, btw)
 require('mini.statusline').setup({ use_icons = vim.g.neovide ~= nil })
 
 -- per-module config (sessions before starter: starter reads `_G.MiniSessions`)
