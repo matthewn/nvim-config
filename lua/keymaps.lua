@@ -95,7 +95,7 @@ keymap('v', '<leader>a', 'di<a href=""<esc>mza><esc>pa</a><esc>`zi', { desc = 'W
 vim.cmd([[cmap w!! w !sudo tee % >/dev/null]])
 
 -- bug out with gs ("get stuffed!") (this used to point at bufkill.vim's :BD)
-vim.keymap.set('n', 'gs', function()
+keymap('n', 'gs', function()
   local bufname = vim.api.nvim_buf_get_name(0)
   local buftype = vim.bo.buftype
   local wins = vim.api.nvim_tabpage_list_wins(0)

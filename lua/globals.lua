@@ -19,8 +19,5 @@ vim.g.mta_use_matchparen_group = 0
 vim.g.lisp_rainbow = 1
 vim.g.slimv_repl_split = 2 -- REPL below code
 
--- vim-gutentags
-vim.g.gutentags_cache_dir = vim.fn.stdpath('data') .. '/tags'
-
 -- vim-matchup
 vim.g.matchup_transmute_enabled = 1 -- enable paired tag renaming (replaces tagalong)
