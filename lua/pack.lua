@@ -42,6 +42,7 @@ vim.pack.add({
   gh('nvim-mini/mini.nvim'),                      -- mini.* library (icons, files, completion, statusline, map, ...)
   gh('nvim-telescope/telescope-fzf-native.nvim'), -- compiled helper, massively increases telescope performance (see PackChanged above)
   gh('nvim-telescope/telescope.nvim'),            -- fuzzy finder (replaces fzf.vim)
+  gh('nvim-telescope/telescope-ui-select.nvim'),  -- route vim.ui.select() through telescope
   gh('nvim-tree/nvim-web-devicons'),              -- (barbar dependency)
   gh('nvim-treesitter/nvim-treesitter'),          -- drives treesitter configs (see PackChanged above)
   gh('nvim-treesitter/nvim-treesitter-context'),  -- show top of long functions

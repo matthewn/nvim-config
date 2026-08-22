@@ -25,6 +25,11 @@ vim.keymap.set('n', '<leader>SS', function()
   end
 end, { desc = 'Save session' })
 
+-- 'delete session' keymap
+vim.keymap.set('n', '<leader>SD', function()
+  require('mini.sessions').select('delete')
+end, { desc = 'Delete session' })
+
 -- 'exit session' keymap
 vim.keymap.set('n', '<leader>XX', function()
   local listed = vim.tbl_filter(function(b)
