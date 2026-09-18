@@ -57,9 +57,9 @@ vim.pack.add({
 
   -- colorschemes
   gh('oahlen/iceberg.nvim'),
-  gh('oxfist/night-owl.nvim'),
   gh('slugbyte/lackluster.nvim'),
   { src = 'https://gitlab.com/shmerl/neogotham.git', name = 'neogotham' },
+  { src = 'https://github.com/bluz71/vim-nightfly-colors', name = 'nightfly' },
 
   -- vimscript plugins, no config
   gh('AndrewRadev/sideways.vim'),                 -- move arguments right/left

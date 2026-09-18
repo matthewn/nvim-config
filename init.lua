@@ -33,7 +33,6 @@ require('faster').setup()
 require('fidget').setup()
 require('neogit').setup({ graph_style = 'unicode' })
 require('neogotham').setup()
-require('night-owl').setup({ italics = false })
 require('nvim-surround').setup()
 require('rooter').setup({ command = 'cd' })
 require('stay-in-place').setup()
@@ -41,7 +40,7 @@ require('stay-in-place').setup()
 -- startup
 if vim.fn.has('vim_starting') == 1 then
   --colorscheme
-  local ok = pcall(vim.cmd.colorscheme, 'neogotham')
+  local ok = pcall(vim.cmd.colorscheme, 'nightfly')
   if not ok then
     vim.cmd.colorscheme('darkblue')
   end

@@ -43,13 +43,6 @@ local function my_highlights()
     -- hl(0, 'pythonStatement', { fg = '#999999' })
   end
 
-  -- tweaks for night-owl
-  if colorscheme == 'night-owl' then
-    hl(0, 'MatchParen', { fg = '#ffffff', bg = '#0a3749' })
-    hl(0, 'Search', { fg = '#ffffff', bg = 'blue' })
-    hl(0, 'IncSearch', { fg = '#ffffff', bg = 'blue' })
-  end
-
   -- refresh indent-blankline
   local ok, ibl_init = pcall(require, 'plugins.ibl-init')
   if ok then
