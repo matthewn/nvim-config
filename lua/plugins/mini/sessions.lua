@@ -6,6 +6,8 @@ require('mini.sessions').setup({
   hooks = {
     pre = {
       write = function()
+        -- clear arglist so files we added via cmd line don't get pinned to session
+        vim.cmd('silent! %argdelete')
         -- necessary to save barbar tab order
         vim.api.nvim_exec_autocmds('User', { pattern = 'SessionSavePre' })
       end,
