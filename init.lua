@@ -36,6 +36,7 @@ require('neogotham').setup()
 require('nvim-surround').setup()
 require('rooter').setup({ command = 'cd' })
 require('stay-in-place').setup()
+require('zimablue').setup({ bold = false, italic = false })
 
 -- startup
 if vim.fn.has('vim_starting') == 1 then

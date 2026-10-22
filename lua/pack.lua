@@ -58,6 +58,7 @@ vim.pack.add({
   -- colorschemes
   gh('oahlen/iceberg.nvim'),
   gh('slugbyte/lackluster.nvim'),
+  gh('tan-wei/zimablue.nvim'),
   { src = 'https://gitlab.com/shmerl/neogotham.git', name = 'neogotham' },
   { src = 'https://github.com/bluz71/vim-nightfly-colors', name = 'nightfly' },
 
