@@ -27,11 +27,11 @@ local function smart_tab()
   if vim.fn.pumvisible() == 1 then
     return vim.api.nvim_replace_termcodes('<c-n>', true, true, true)
   end
-  local ok, mini_completion = pcall(require, 'mini.completion')
-  if ok and mini_completion and mini_completion.complete then
-    if mini_completion.complete() then
-      return '' -- completion opened
-    end
+  -- after a non-space char (e.g. `(` or a partial word), force LSP completion
+  local col = vim.fn.col('.') - 1
+  if col > 0 and vim.fn.getline('.'):sub(col, col):match('%S') then
+    vim.schedule(completion.complete_twostage)
+    return ''
   end
   return vim.api.nvim_replace_termcodes('<tab>', true, true, true)
 end
